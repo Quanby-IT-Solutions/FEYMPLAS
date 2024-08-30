@@ -17,6 +17,7 @@
 }
 
 body {
+  user-select: none;
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
 }
@@ -27,6 +28,6 @@ body {
   }
 }
 
-.landing-bg{
+.landing-bg {
   background-color: rgb(237, 225, 209, 80%);
 }

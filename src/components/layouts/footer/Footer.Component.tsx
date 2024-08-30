@@ -10,8 +10,7 @@ const Footer1 = () => {
           <p className='text-sm mt-2'>PHILIPPINE DESIGN AND BEYOND</p>
           {/* Social Media Links as Text */}
           <div className='flex space-x-4 justify-center md:justify-start mt-4'>
-            {/* Replace '#' with actual links */}
-            <a href='#' className='text-black hover:text-gray-600'>
+            <a href='/test' className='text-black hover:text-gray-600'>
               Facebook
             </a>
             <a href='#' className='text-black hover:text-gray-600'>
