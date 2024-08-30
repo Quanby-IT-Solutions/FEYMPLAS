@@ -1,5 +1,9 @@
-const Button = () => {
-  return <button>HEHE</button>;
+const Button: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return (
+    <button>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
