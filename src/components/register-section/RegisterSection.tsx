@@ -1,8 +1,8 @@
-import Section1 from "./Section-1";
-import Section2 from "./Section-2";
+import SectionTop from "./SectionTop";
+import SectionBottom from "./SectionBottom";
 
 export default function RegisterSection() {
     return (
-        <><Section1 /><Section2 /></>
+        <><SectionTop /><SectionBottom /></>
     );
 }
