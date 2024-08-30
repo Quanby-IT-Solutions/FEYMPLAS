@@ -1,14 +1,15 @@
 'use client'
 
+import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 
-export default function RegisterSection1() {
-    
+export default function Section1() {
+
     const router = useRouter()
 
     return (
         <section className="flex flex-col items-center py-16 bg-gray-50">
-            <h1 className="text-4xl font-bold mb-10">REGISTER NOW</h1>
+            <h1 className="text-4xl font-bold mb-10 text-gray-900">REGISTER NOW</h1>
             <div className="flex flex-wrap justify-center gap-8">
                 {/* For Trade Buyers */}
                 <div className="bg-white shadow-lg p-8 w-full max-w-sm text-center">
@@ -18,11 +19,11 @@ export default function RegisterSection1() {
                         <br />
                         Get in touch with suppliers and brands. Access to product specifications. Access to exclusive content.
                     </p>
-                    <button className="bg-green-700 text-white py-3 px-6 rounded mb-4">
+                    <button type="button" className="bg-white text-green-700 py-3 px-6 rounded" onClick={() => router.push('/trade-buyer-registration')}>
                         Create Trade Buyer Account
                     </button>
                     <p className="text-sm">
-                        Already a FAME buyer? <a href="#" className="text-green-700 underline">Login here.</a>
+                        Already a FAME buyer? <Link href="/trade-buyer-login" className="text-green-700 underline">Login here. Modal</Link>
                     </p>
                 </div>
 
@@ -34,7 +35,7 @@ export default function RegisterSection1() {
                         <br />
                         Do not miss out on the most awaited Philippine fair for home, fashion, and lifestyle. Indulge your senses, be inspired, and network.
                     </p>
-                    <button type="button" className="bg-white text-green-700 py-3 px-6 rounded" onClick={() => router.push('/auth/register')}>
+                    <button type="button" className="bg-white text-green-700 py-3 px-6 rounded" onClick={() => router.push('/visitor-registration')}>
                         Register
                     </button>
                 </div>
@@ -47,11 +48,12 @@ export default function RegisterSection1() {
                         <br />
                         Exclusive to Philippine manufacturers, traders, designers, and artisans who are currently exporting or looking to expand to the global market.
                     </p>
-                    <button className="bg-green-700 text-white py-3 px-6 rounded mb-4">
+                    <button type="button" className="bg-white text-green-700 py-3 px-6 rounded" onClick={() => router.push('/exhibitor-registration')}>
                         Create Exhibitor Account
                     </button>
                     <p className="text-sm">
-                        Already a FAME Exhibitor? <a href="#" className="text-green-700 underline">Login here.</a>
+                        Already a FAME Exhibitor?
+                        <Link href="/exhibitor-login" className="text-green-700 underline">Login here. Modal</Link>
                     </p>
                 </div>
             </div>

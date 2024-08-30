@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-export default function RegisterSection2() {
+export default function Section2() {
     return (
         <section className="py-16 px-6 bg-white">
             <div className="max-w-7xl mx-auto">
