@@ -1,8 +1,8 @@
 import Navbar from '@/components/layouts/Navbar';
-import Footer from '@/components/layouts/Footer';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Footer from '@/components/layouts/footer/Footer.Component';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* NAVBAR HERE */}
         <Navbar />
-        {children}
+        <div className="flex flex-col min-h-screen">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
