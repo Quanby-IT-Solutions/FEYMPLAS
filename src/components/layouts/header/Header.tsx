@@ -6,8 +6,12 @@ const Header: React.FC = () => {
     <header className='flex items-center justify-between bg-white  h-[100px] p-[28px_167px_29px_167px] gap-10 mx-auto opacity-100'>
       {/* Logo Section */}
       <div className='logo'>
-        {/* <img src='logo.png' alt='Logo' className='h-12' /> */}
-        <h1 className='text-black'> Logo Here</h1>
+        <img
+          loading='lazy'
+          src='https://cdn.builder.io/api/v1/image/assets/TEMP/f7d065330f1400e12c4b32bd546f775c58fe261fc955eed326a636d1fc72a7e5?placeholderIfAbsent=true&apiKey=ee08f851c2f4486d80ef80d866bed106'
+          alt='Company logo'
+          className='object-contain shrink-0 self-stretch my-auto aspect-[4.88] w-[73px]'
+        />
       </div>
 
       {/* Navigation Links */}
