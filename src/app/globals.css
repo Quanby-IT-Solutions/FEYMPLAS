@@ -26,3 +26,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.landing-bg{
+  background-color: rgb(237, 225, 209, 80%);
+}
