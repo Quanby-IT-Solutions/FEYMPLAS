@@ -1,11 +1,22 @@
 'use client'
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation'
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import LoginModal from '../ui/LoginModal';
 
-export default function Section1() {
+export default function SectionTop() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [loginType, setLoginType] = useState<'Exhibitor' | 'Trade Buyer'>('Exhibitor'); // State to determine login type
+    const router = useRouter();
 
-    const router = useRouter()
+    const openModal = (type: 'Exhibitor' | 'Trade Buyer') => {
+        setLoginType(type);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     return (
         <section className="flex flex-col items-center py-16 bg-gray-50">
@@ -23,7 +34,13 @@ export default function Section1() {
                         Create Trade Buyer Account
                     </button>
                     <p className="text-sm">
-                        Already a FAME buyer? <Link href="/trade-buyer-login" className="text-green-700 underline">Login here. Modal</Link>
+                        Already a FAME buyer?{' '}
+                        <button
+                            onClick={() => openModal('Trade Buyer')} // Open Trade Buyer login modal
+                            className="text-green-700 underline"
+                        >
+                            Login here.
+                        </button>
                     </p>
                 </div>
 
@@ -52,11 +69,26 @@ export default function Section1() {
                         Create Exhibitor Account
                     </button>
                     <p className="text-sm">
-                        Already a FAME Exhibitor?
-                        <Link href="/exhibitor-login" className="text-green-700 underline">Login here. Modal</Link>
+                        Already a FAME Exhibitor?{' '}
+                        <button
+                            onClick={() => openModal('Exhibitor')} // Open Exhibitor login modal
+                            className="text-green-700 underline"
+                        >
+                            Login here.
+                        </button>
                     </p>
                 </div>
             </div>
+
+            {/* Unified Login Modal for Both Exhibitor and Trade Buyer */}
+            {isModalOpen && (
+                <LoginModal
+                    title={`Login To Your ${loginType} Account`}
+                    logoText="FAME+"
+                    onClose={closeModal}
+                    loginType={loginType} // Pass loginType to determine logic inside the modal
+                />
+            )}
         </section>
     );
 }
