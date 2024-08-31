@@ -1,11 +1,11 @@
 // src/components/forms/trade-buyer/step-4/ParticipationDetails.tsx
 
 import Image from 'next/image';
-import ProgressBar from "../ProgressBar";
+import ProgressBar from "../../../ui/ProgressBar";
 import { ParticipationDetails } from "@/interfaces/trade-buyer";
 import CheckboxGroup from '@/components/ui/CheckboxGroup';
 import RadioGroup from '@/components/ui/RadioGroup';
-import NavigationButtons from '../NavigationButtons';
+import NavigationButtons from '../../../ui/NavigationButtons';
 
 interface ParticipationDetailsProps {
   data: ParticipationDetails;

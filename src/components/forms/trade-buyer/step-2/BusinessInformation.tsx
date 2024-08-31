@@ -1,11 +1,11 @@
 // src/components/forms/trade-buyer/step-2/BusinessInformation.tsx
 
 import { BusinessInfo } from '@/interfaces/trade-buyer';
-import ProgressBar from '../ProgressBar';
+import ProgressBar from '../../../ui/ProgressBar';
 import IndustryRepresentation from './IndustryRepresentation';
 import SupplierInformation from './SupplierInformation';
 import CompanyDetails from './CompanyDetails';
-import NavigationButtons from '../NavigationButtons'; // Import NavigationButtons
+import NavigationButtons from '../../../ui/NavigationButtons'; // Import NavigationButtons
 
 interface BusinessInformationProps {
   data: BusinessInfo;
