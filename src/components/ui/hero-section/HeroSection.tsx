@@ -2,7 +2,7 @@
 export default function HeroSection() {
   return (
     <div className="w-full h-full">
-      <div className="w-full h-full pt-10 flex flex-col justify-evenly gap-8 items-center text-lg">
+      <div className="w-full h-full pt-10 flex flex-col justify-evenly gap-8 items-center text-lg tracking-wider">
         <img src="assets/logo_black.png" alt="" />
         <div className="w-full flex flex-row justify-center items-center gap-8 ml-[10%]">
           <div className="flex flex-col items-end font-semibold text-secondary-5 text-2xl">
@@ -26,8 +26,8 @@ export default function HeroSection() {
               <h1 className="text-3xl font-bold w-full max-w-md">
                 CR<span className="italic font-normal font-serif">A</span>FTED <span className="italic font-normal font-serif">E</span>LEGANCE: Embracing Modernity with Nature’s Riches
               </h1>
-              <p className="w-full max-w-lg text-lg">
-                South Sea Veneer offers endless p<span className="italic font-normal font-serif">o</span>ssibilities by creating works
+              <p className="w-full max-w-2xl text-lg">
+                South Sea Veneer offers endless p<span className="italic font-normal font-serif">o</span>ssibilities by creating works <br />
                 of art from various natural resources.
               </p>
             </div>
