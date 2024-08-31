@@ -42,7 +42,7 @@ const NavigationButtons: React.FC<NavigationButtonsProps> = ({
         <button
           className="flex flex-col self-stretch my-auto w-[53px] h-[53px] bg-stone-600"
           aria-label="Previous"
-          onClick={handlePrevClick}  // Use wrapped function
+          onClick={handlePrevClick}
         >
           <span className="self-center my-auto">&lt;</span>
         </button>
@@ -50,7 +50,7 @@ const NavigationButtons: React.FC<NavigationButtonsProps> = ({
       {showNext && (
         <button
           className="flex flex-col self-stretch my-auto w-[171px] px-12 py-3.5 bg-stone-600 min-h-[53px] max-md:px-5"
-          onClick={handleNextClick}  // Use wrapped function
+          onClick={handleNextClick}
         >
           {isSubmit ? 'SUBMIT' : 'NEXT'}
         </button>

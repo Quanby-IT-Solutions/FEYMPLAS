@@ -1,4 +1,4 @@
-// src/interfaces/trade-buyer.ts
+// src/interfaces/trade-buyer.tsx
 
 export interface BuyerInfo {
   allowDataSharing: boolean;

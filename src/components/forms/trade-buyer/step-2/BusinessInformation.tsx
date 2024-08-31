@@ -5,12 +5,12 @@ import ProgressBar from '../../../ui/ProgressBar';
 import IndustryRepresentation from './IndustryRepresentation';
 import SupplierInformation from './SupplierInformation';
 import CompanyDetails from './CompanyDetails';
-import NavigationButtons from '../../../ui/NavigationButtons'; // Import NavigationButtons
+import NavigationButtons from '../../../ui/NavigationButtons';
 
 interface BusinessInformationProps {
   data: BusinessInfo;
   updateData: (data: Partial<BusinessInfo>) => void;
-  handlePrev: () => void; 
+  handlePrev: () => void;
   handleNext: () => void;
 }
 
@@ -43,9 +43,9 @@ const BusinessInformation: React.FC<BusinessInformationProps> = ({ data, updateD
 
       {/* Navigation Buttons */}
       <NavigationButtons
-        handlePrev={handlePrev}  // Use handlePrev to navigate back
-        handleNext={handleNext}  // Use handleNext to navigate forward
-        showPrev={true}          // Show the Previous button
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+        showPrev={true}
       />
     </section>
   );
