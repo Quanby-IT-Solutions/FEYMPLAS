@@ -1,19 +1,20 @@
 // src/components/forms/trade-buyer/step-4/ParticipationDetails.tsx
 
 import Image from 'next/image';
-
 import ProgressBar from "../ProgressBar";
-
 import { ParticipationDetails } from "@/interfaces/trade-buyer";
 import CheckboxGroup from '@/components/ui/CheckboxGroup';
 import RadioGroup from '@/components/ui/RadioGroup';
+import NavigationButtons from '../NavigationButtons';
 
 interface ParticipationDetailsProps {
   data: ParticipationDetails;
   updateData: (data: Partial<ParticipationDetails>) => void;
+  handlePrev: () => void;
+  handleNext: () => void;
 }
 
-const ParticipationDetailsForm: React.FC<ParticipationDetailsProps> = ({ data, updateData }) => {
+const ParticipationDetailsForm: React.FC<ParticipationDetailsProps> = ({ data, updateData, handlePrev, handleNext }) => {
   const handleCheckboxGroupChange = (key: keyof ParticipationDetails, value: string[]) => {
     updateData({ [key]: value });
   };
@@ -107,6 +108,14 @@ const ParticipationDetailsForm: React.FC<ParticipationDetailsProps> = ({ data, u
           </div>
         </section>
       </div>
+
+      {/* Navigation Buttons */}
+      <NavigationButtons
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+        showPrev={true}
+        showNext={true}
+      />
     </div>
   );
 };

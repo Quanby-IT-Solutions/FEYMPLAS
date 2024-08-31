@@ -1,17 +1,22 @@
 'use client';
 
 import { useState } from "react";
-import { FormData, BuyerInfo, BusinessInfo, ParticipationDetails } from "@/interfaces/trade-buyer";
+import { useRouter } from 'next/navigation';
+import { FormData } from "@/interfaces/trade-buyer";
 
-import NavigationButtons from "@/components/forms/trade-buyer/NavigationButtons";
 import BuyerRegistrationForm from "@/components/forms/trade-buyer/step-1/BuyerRegistrationForm";
 import BusinessInformation from "@/components/forms/trade-buyer/step-2/BusinessInformation";
 import ProductCategory from "@/components/forms/trade-buyer/step-3/ProductCategory";
 import ParticipationDetailsForm from "@/components/forms/trade-buyer/step-4/ParticipationDetails";
-import { BuyerInformation } from "@/components/forms/trade-buyer/step-5/BuyerInformation";
+import BuyerInformation from "@/components/forms/trade-buyer/step-5/BuyerInformation";
+import ThankYouModal from "@/components/ui/ThankYouModal";
+import SavingState from "@/components/ui/SavingState";
 
 const TradeBuyerRegistrationForm: React.FC = () => {
   const [step, setStep] = useState(1);
+  const [isSaving, setIsSaving] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const router = useRouter();
 
   const [formData, setFormData] = useState<FormData>({
     buyerInfo: {
@@ -74,45 +79,87 @@ const TradeBuyerRegistrationForm: React.FC = () => {
 
   const handleSubmit = () => {
     console.log('Form Submitted:', formData);
-    // Add form submission logic here
+    setIsSaving(true); // Set saving state to true
+  };
+
+  const handleSuccess = () => {
+    setIsSaving(false); // End saving state
+    setShowModal(true); // Show success modal
+  };
+
+  const closeThankYouModal = () => {
+    setShowModal(false);
+    router.push('/'); // Redirect after closing the modal
   };
 
   const renderStep = () => {
     switch (step) {
       case 1:
-        return <BuyerRegistrationForm data={formData.buyerInfo} updateData={(data) => updateFormData('buyerInfo', data)} />;
+        return (
+          <BuyerRegistrationForm
+            data={formData.buyerInfo}
+            updateData={(data) => updateFormData('buyerInfo', data)}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
+          />
+        );
       case 2:
-        return <BusinessInformation data={formData.businessInfo} updateData={(data) => updateFormData('businessInfo', data)} />;
+        return (
+          <BusinessInformation
+            data={formData.businessInfo}
+            updateData={(data) => updateFormData('businessInfo', data)}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
+          />
+        );
       case 3:
         return (
           <ProductCategory
             selectedCategories={formData.productCategories}
             updateSelectedCategories={updateProductCategories}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
           />
         );
       case 4:
-        return <ParticipationDetailsForm data={formData.participationDetails} updateData={(data) => updateFormData('participationDetails', data)} />;
+        return (
+          <ParticipationDetailsForm
+            data={formData.participationDetails}
+            updateData={(data) => updateFormData('participationDetails', data)}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
+          />
+        );
       case 5:
-        return <BuyerInformation buyerInfo={formData.buyerInfo} companyDetails={formData.businessInfo} />;
+        return (
+          <BuyerInformation
+            buyerInfo={formData.buyerInfo}
+            companyDetails={formData.businessInfo}
+            handlePrev={handlePrev}
+            handleSubmit={handleSubmit} // Submit at the last step
+          />
+        );
       default:
         return null;
     }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-gray-900">
-      <div className="w-full max-w-4xl shadow-lg rounded-lg p-8">
-        <h1 className="text-3xl font-bold mb-4 text-center">CREATE YOUR TRADE BUYER ACCOUNT</h1>
+    <div className="flex flex-col min-h-screen text-gray-900">
+      {isSaving ? (
+        <SavingState accountType="Trade Buyer" onSuccess={handleSuccess} />
+      ) : showModal ? (
+        <ThankYouModal accountType="Trade Buyer" onClose={() => setShowModal(false)} />
+      ) : (
+        <div className="">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center">CREATE YOUR TRADE BUYER ACCOUNT</h1>
 
-        {renderStep()}
+          {renderStep()}
 
-        <NavigationButtons
-          handlePrev={handlePrev}
-          handleNext={step === 5 ? handleSubmit : handleNext}
-          isSubmit={step === 5}
-        />
-      </div>
+        </div>
+      )}
     </div>
+
   );
 };
 

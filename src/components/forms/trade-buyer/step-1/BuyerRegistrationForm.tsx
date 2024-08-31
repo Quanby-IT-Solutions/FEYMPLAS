@@ -7,13 +7,16 @@ import BuyerInformationSection from './BuyerInformationSection';
 import AdditionalInformationSection from './AdditionalInformationSection';
 import TermsAndAgreementsSection from './TermsAndAgreementsSection';
 import PromotionalImages from './PromotionalImages';
+import NavigationButtons from "@/components/forms/trade-buyer/NavigationButtons";
 
 interface BuyerRegistrationFormProps {
   data: BuyerInfo;
   updateData: (data: Partial<BuyerInfo>) => void;
+  handleNext: () => void;
+  handlePrev: () => void;
 }
 
-const BuyerRegistrationForm: React.FC<BuyerRegistrationFormProps> = ({ data, updateData }) => {
+const BuyerRegistrationForm: React.FC<BuyerRegistrationFormProps> = ({ data, updateData, handleNext, handlePrev }) => {
   return (
     <div className="flex flex-col w-full max-md:max-w-full">
       <main className="overflow-hidden mt-24 w-full max-md:mt-10 max-md:max-w-full">
@@ -34,6 +37,16 @@ const BuyerRegistrationForm: React.FC<BuyerRegistrationFormProps> = ({ data, upd
           </section>
 
           <PromotionalImages />
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="flex justify-end mt-8">
+          <NavigationButtons
+            handlePrev={handlePrev}
+            handleNext={handleNext}
+            isSubmit={false}
+            showPrev={false}
+          />
         </div>
       </main>
     </div>
