@@ -30,7 +30,7 @@ const SupplierInformation: React.FC<SupplierInformationProps> = ({ suppliers, up
 
   // Handler to remove a supplier input field
   const removeSupplier = (index: number) => {
-    if (suppliers.length > 3) { // Ensure a minimum of 3 fields
+    if (suppliers.length > 3) {
       const updatedSuppliers = suppliers.filter((_, i) => i !== index);
       updateSuppliers(updatedSuppliers);
     }

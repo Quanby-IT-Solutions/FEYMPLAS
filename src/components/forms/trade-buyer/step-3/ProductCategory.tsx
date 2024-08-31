@@ -6,8 +6,8 @@ import NavigationButtons from '../NavigationButtons'; // Import NavigationButton
 interface ProductCategoryProps {
     selectedCategories: string[];
     updateSelectedCategories: (categories: string[]) => void;
-    handlePrev: () => void; // Add handlePrev prop
-    handleNext: () => void; // Add handleNext prop
+    handlePrev: () => void;
+    handleNext: () => void;
 }
 
 const ProductCategory: React.FC<ProductCategoryProps> = ({ selectedCategories, updateSelectedCategories, handlePrev, handleNext }) => {

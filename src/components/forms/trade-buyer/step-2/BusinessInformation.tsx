@@ -10,8 +10,8 @@ import NavigationButtons from '../NavigationButtons'; // Import NavigationButton
 interface BusinessInformationProps {
   data: BusinessInfo;
   updateData: (data: Partial<BusinessInfo>) => void;
-  handlePrev: () => void; // Add handlePrev prop
-  handleNext: () => void; // Add handleNext prop
+  handlePrev: () => void; 
+  handleNext: () => void;
 }
 
 const BusinessInformation: React.FC<BusinessInformationProps> = ({ data, updateData, handlePrev, handleNext }) => {

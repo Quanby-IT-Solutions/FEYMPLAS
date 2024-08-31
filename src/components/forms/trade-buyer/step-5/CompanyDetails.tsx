@@ -51,8 +51,10 @@ export const CompanyDetails: React.FC<CompanyDetailsProps> = ({ details }) => {
                   {field.replace(/([A-Z])/g, " $1").trim()}:
                 </div>
                 <div className="overflow-hidden grow shrink py-3.5 min-w-[240px] w-[219px]">
-                  {Array.isArray(details[field as keyof typeof details]) // Check if it's an array
-                    ? (details[field as keyof typeof details] as string[]).join(", ") // Convert array to a string
+                  {Array.isArray(details[field as keyof typeof details])
+                    // Check if it's an array
+                    ? (details[field as keyof typeof details] as string[]).join(", ")
+                    // Convert array to a string
                     : details[field as keyof typeof details]}
                 </div>
               </div>
