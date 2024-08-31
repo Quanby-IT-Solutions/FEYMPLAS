@@ -9,7 +9,7 @@ interface AdditionalInformationSectionProps {
     updateData: (data: Partial<BuyerInfo>) => void;
 }
 
-const AdditionalInformationSection: React.FC<AdditionalInformationSectionProps> = ({ data, updateData }) => {
+export const  AdditionalInformationSection: React.FC<AdditionalInformationSectionProps> = ({ data, updateData }) => {
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
         updateData({ [name]: value });
