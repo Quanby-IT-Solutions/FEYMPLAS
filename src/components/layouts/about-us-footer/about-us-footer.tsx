@@ -33,10 +33,10 @@ export default function Footer() {
           <div className="w-full flex flex-row gap-4">
             <input
               type="text"
-              className="w-full p-3 pl-6 border border-timeless-white bg-primary-2 placeholder:text-timeless-white"
+              className="w-full p-3 pl-6 border border-timeless-white bg-primary-2 placeholder:text-timeless-white outline-none"
               placeholder="Your email"
             />
-            <button className="uppercase p-3 w-44 bg-secondary-5">Submit</button>
+            <button className="uppercase p-3 w-44 bg-secondary-5 text-timeless-white">Submit</button>
           </div>
           <p className="text-xs font-[200] max-w-md">
             Your data is safe with us and you can unsubscribe at any time. For

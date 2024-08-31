@@ -4,7 +4,7 @@ import Footer from "@/components/layouts/about-us-footer/about-us-footer";
 export default function AboutUs() {
   return (
     <section className="w-full h-fit text-primary-2 text-lg font-[300]">
-      <div className="w-full h-full max-w-[75%] mx-auto flex flex-col gap-16 justify-center items-center">
+      <div className="w-full h-full flex flex-col gap-20">
         <FirstSection />
         <SecondSection />
         <ThirdSection />
@@ -18,28 +18,32 @@ export default function AboutUs() {
 // First Section
 const FirstSection = () => {
   return (
-    <div className="w-full flex flex-col justify-center gap-8 items-center py-8">
-      <h1 className="text-4xl font-bold">About Us</h1>
-      <Buttons />
-      <div className="w-full font-[300]">
-        <div className="flex flex-row gap-2 justify-start items-center">
-          <p>FAME+</p>
-          <hr className="w-16 border border-primary-2" />
-        </div>
-        <div className="w-full flex flex-row justify-center gap-20 pb-8">
-          <FirstDiv />
+    <div className="w-full flex flex-col justify-center gap-8 items-center py-8 ">
+      <div className="w-full max-w-[80%] flex flex-col gap-10">
+        <h1 className="text-5xl font-bold text-center">About Us</h1>
+        <Buttons />
+        <div className="w-full font-[300]">
+          <div className="flex flex-row gap-2 justify-start items-center">
+            <p>FAME+</p>
+            <hr className="w-16 border border-primary-2" />
+          </div>
+          <div className="w-full flex flex-row justify-center pb-8">
+            <FirstDiv />
 
-          <img
-            className="object-cover"
-            src="assets/about-us/1.png"
-            alt=""
-          />
-        </div>
-        <div className="w-full flex items-center justify-center">
-          <p>
-            FAME+ is published by the Center for International Trade Expositions
-            & Missions (CITEM).{" "}
-          </p>
+            <div className="w-full flex justify-end items-end">
+              <img
+                className="object-cover"
+                src="assets/about-us/1.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="w-full flex items-center justify-center">
+            <p>
+              FAME+ is published by the Center for International Trade Expositions
+              & Missions (CITEM).{" "}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -47,8 +51,8 @@ const FirstSection = () => {
 };
 const FirstDiv = () => {
   return (
-    <div className="flex flex-col justify-start items-start gap-8 tracking-wide">
-      <h1 className="text-3xl font-bold">
+    <div className="w-full flex flex-col justify-start items-start gap-10 tracking-wide">
+      <h1 className="text-4xl font-bold">
         PHILIPPINE DESIGN <br /> AND BEYOND
       </h1>
       <p>
@@ -104,22 +108,26 @@ const Buttons = () => {
 const SecondSection = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center py-8">
-      <div className="w-full flex flex-row justify-start gap-20 items-start pb-6">
-        <img className=" object-cover" src="assets/about-us/2.png" alt="" />
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-row gap-2 justify-start items-center">
-            <p>MANILA FAME</p>
-            <hr className="w-16 border border-primary-2" />
+      <div className="w-full max-w-[80%] flex flex-col justify-center items-center gap-10">
+        <div className="w-full flex flex-row justify-start  items-start pb-6">
+          <div className="w-full">
+            <img className="object-cover" src="assets/about-us/2.png" alt="" />
           </div>
-          <SecondDiv />
+          <div className="w-full flex flex-col gap-8">
+            <div className="flex flex-row gap-2 justify-start items-center">
+              <p>MANILA FAME</p>
+              <hr className="w-16 border border-primary-2" />
+            </div>
+            <SecondDiv />
+          </div>
         </div>
-      </div>
-      <div>
-        <p className="w-full max-w-screen-md text-center">
-          Manila FAME is a member of the Union des Foires Internationales (UFI)
-          and is organized by the Center for International Trade Expositions and
-          Missions (CITEM).
-        </p>
+        <div>
+          <p className="w-full max-w-screen-md text-center">
+            Manila FAME is a member of the Union des Foires Internationales (UFI)
+            and is organized by the Center for International Trade Expositions and
+            Missions (CITEM).
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -154,11 +162,15 @@ const SecondDiv = () => {
 const ThirdSection = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center py-8">
-      <div className="w-full flex flex-row justify-start gap-20 items-start pb-4">
-        <div className="flex flex-col gap-8">
-          <ThirdDiv />
+      <div className="w-full max-w-[80%] flex flex-col justify-center items-center gap-10">
+        <div className="w-full flex flex-row justify-start items-start">
+          <div className="w-full flex flex-col gap-8">
+            <ThirdDiv />
+          </div>
+          <div className="w-full flex justify-end items-center">
+            <img className="object-cover" src="assets/about-us/3.png" alt="" />
+          </div>
         </div>
-        <img className="object-cover" src="assets/about-us/3.png" alt="" />
       </div>
     </div>
   );

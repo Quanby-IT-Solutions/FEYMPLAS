@@ -21,6 +21,7 @@ const config: Config = {
           4: '#2C2C2C', // Secondary 4
           5: '#6A704C', // Secondary 4
           6: '#CCB89D', // Secondary 4
+          7: '#F4F4F2', // bg-for some page
         },
         // Adding black and white for the timeless palette
         'timeless-black': '#000000',
