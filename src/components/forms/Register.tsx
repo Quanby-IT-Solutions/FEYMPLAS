@@ -1,3 +1,5 @@
+// src/components/forms/Register.tsx
+
 import Button from "@/components/ui/Button";
 
 const RegisterForm = () => {

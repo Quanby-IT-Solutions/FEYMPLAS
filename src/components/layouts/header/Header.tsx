@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header className='flex items-center justify-between bg-white  h-[100px] p-[28px_167px_29px_167px] gap-10 mx-auto opacity-100 sticky top-0 z-50'>
+    <header className='flex items-center justify-between bg-white  h-[100px] p-[28px_167px_29px_167px] gap-10 mx-auto opacity-100 top-0 z-50'>
       {/* Logo Section */}
       <div className='logo'>
         <img
