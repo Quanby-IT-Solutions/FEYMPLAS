@@ -15,11 +15,10 @@ const SavingState: React.FC<SavingStateProps> = ({ accountType, onSuccess }) => 
     return () => clearTimeout(timer);
   }, [onSuccess]);
 
-  // Prevent body scroll when SavingState is active
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
-      document.body.style.overflow = 'auto'; // Restore scroll when component unmounts
+      document.body.style.overflow = 'auto';
     };
   }, []);
 

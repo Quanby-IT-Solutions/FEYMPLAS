@@ -30,11 +30,10 @@ const ThankYouModal: React.FC<ThankYouModalProps> = ({ accountType, onClose }) =
         return () => clearInterval(timer);
     }, [router, onClose]);
 
-    // Prevent body scroll when ThankYouModal is active
     useEffect(() => {
         document.body.style.overflow = 'hidden';
         return () => {
-            document.body.style.overflow = 'auto'; // Restore scroll when component unmounts
+            document.body.style.overflow = 'auto';
         };
     }, []);
 

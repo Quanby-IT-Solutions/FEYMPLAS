@@ -57,10 +57,10 @@ export const BuyerInformation: React.FC<BuyerInformationProps> = ({
       {/* Navigation Buttons */}
       <NavigationButtons
         handlePrev={handlePrev}
-        handleNext={handleSubmit} // Changed to handleSubmit
+        handleNext={handleSubmit}
         showPrev={true}
-        showNext={true} // Ensure showNext is set to true
-        isSubmit={true} // Set to true for submit button
+        showNext={true}
+        isSubmit={true}
       />
     </main>
   );
