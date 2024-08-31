@@ -5,13 +5,16 @@ import ProgressBar from '../ProgressBar';
 import IndustryRepresentation from './IndustryRepresentation';
 import SupplierInformation from './SupplierInformation';
 import CompanyDetails from './CompanyDetails';
+import NavigationButtons from '../NavigationButtons'; // Import NavigationButtons
 
 interface BusinessInformationProps {
   data: BusinessInfo;
   updateData: (data: Partial<BusinessInfo>) => void;
+  handlePrev: () => void; // Add handlePrev prop
+  handleNext: () => void; // Add handleNext prop
 }
 
-const BusinessInformation: React.FC<BusinessInformationProps> = ({ data, updateData }) => {
+const BusinessInformation: React.FC<BusinessInformationProps> = ({ data, updateData, handlePrev, handleNext }) => {
   return (
     <section className="flex flex-col w-full max-md:max-w-full">
       <h1 className="w-full text-4xl font-bold rounded-none text-stone-800 max-md:pr-5">
@@ -36,6 +39,13 @@ const BusinessInformation: React.FC<BusinessInformationProps> = ({ data, updateD
       <SupplierInformation
         suppliers={data.suppliers}
         updateSuppliers={(suppliers) => updateData({ suppliers })}
+      />
+
+      {/* Navigation Buttons */}
+      <NavigationButtons
+        handlePrev={handlePrev}  // Use handlePrev to navigate back
+        handleNext={handleNext}  // Use handleNext to navigate forward
+        showPrev={true}          // Show the Previous button
       />
     </section>
   );

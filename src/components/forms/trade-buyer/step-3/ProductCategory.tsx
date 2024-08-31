@@ -1,13 +1,16 @@
 // src/components/forms/trade-buyer/step-3/ProductCategory.tsx
 
 import CategorySection from "./CategorySection";
+import NavigationButtons from '../NavigationButtons'; // Import NavigationButtons
 
 interface ProductCategoryProps {
     selectedCategories: string[];
     updateSelectedCategories: (categories: string[]) => void;
+    handlePrev: () => void; // Add handlePrev prop
+    handleNext: () => void; // Add handleNext prop
 }
 
-const ProductCategory: React.FC<ProductCategoryProps> = ({ selectedCategories, updateSelectedCategories }) => {
+const ProductCategory: React.FC<ProductCategoryProps> = ({ selectedCategories, updateSelectedCategories, handlePrev, handleNext }) => {
     const categories = [
         {
             title: 'Fashion',
@@ -103,6 +106,14 @@ const ProductCategory: React.FC<ProductCategoryProps> = ({ selectedCategories, u
                     ))}
                 </div>
             </section>
+
+            {/* Navigation Buttons */}
+            <NavigationButtons
+                handlePrev={handlePrev}
+                handleNext={handleNext}
+                showPrev={true}
+                showNext={true}
+            />
         </main>
     );
 };

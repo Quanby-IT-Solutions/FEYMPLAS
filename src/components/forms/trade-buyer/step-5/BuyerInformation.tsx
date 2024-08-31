@@ -5,15 +5,20 @@ import Image from 'next/image';
 import { InfoSection } from "@/components/forms/trade-buyer/step-5/InfoSection";
 import { CompanyDetails } from "@/components/forms/trade-buyer/step-5/CompanyDetails";
 import { BusinessInfo, BuyerInfo } from '@/interfaces/trade-buyer';
+import NavigationButtons from '../NavigationButtons';
 
 interface BuyerInformationProps {
   buyerInfo: BuyerInfo;
   companyDetails: BusinessInfo;
+  handlePrev: () => void;
+  handleSubmit: () => void;
 }
 
 export const BuyerInformation: React.FC<BuyerInformationProps> = ({
   buyerInfo,
   companyDetails,
+  handlePrev,
+  handleSubmit,
 }) => {
   const formattedBuyerInfo = {
     salutation: buyerInfo.salutation,
@@ -48,6 +53,17 @@ export const BuyerInformation: React.FC<BuyerInformationProps> = ({
           quality={100}
         />
       </aside>
+
+      {/* Navigation Buttons */}
+      <NavigationButtons
+        handlePrev={handlePrev}
+        handleNext={handleSubmit} // Changed to handleSubmit
+        showPrev={true}
+        showNext={true} // Ensure showNext is set to true
+        isSubmit={true} // Set to true for submit button
+      />
     </main>
   );
 };
+
+export default BuyerInformation;
