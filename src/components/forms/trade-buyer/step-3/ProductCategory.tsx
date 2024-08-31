@@ -1,7 +1,7 @@
 // src/components/forms/trade-buyer/step-3/ProductCategory.tsx
 
 import CategorySection from "./CategorySection";
-import NavigationButtons from '../NavigationButtons'; // Import NavigationButtons
+import NavigationButtons from '../../../ui/NavigationButtons'; // Import NavigationButtons
 
 interface ProductCategoryProps {
     selectedCategories: string[];

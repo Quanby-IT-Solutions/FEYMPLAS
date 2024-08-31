@@ -1,13 +1,13 @@
 // src/components/forms/trade-buyer/step-1/BuyerRegistrationForm.tsx
 
-import ProgressBar from "../ProgressBar";
+import ProgressBar from "../../../ui/ProgressBar";
 import { BuyerInfo } from '@/interfaces/trade-buyer';
 import ManilaFameSection from './ManilaFameSection';
 import BuyerInformationSection from './BuyerInformationSection';
 import AdditionalInformationSection from './AdditionalInformationSection';
 import TermsAndAgreementsSection from './TermsAndAgreementsSection';
 import PromotionalImages from './PromotionalImages';
-import NavigationButtons from "@/components/forms/trade-buyer/NavigationButtons";
+import NavigationButtons from "@/components/ui/NavigationButtons";
 
 interface BuyerRegistrationFormProps {
   data: BuyerInfo;

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { InfoSection } from "@/components/forms/trade-buyer/step-5/InfoSection";
 import { CompanyDetails } from "@/components/forms/trade-buyer/step-5/CompanyDetails";
 import { BusinessInfo, BuyerInfo } from '@/interfaces/trade-buyer';
-import NavigationButtons from '../NavigationButtons';
+import NavigationButtons from '../../../ui/NavigationButtons';
 
 interface BuyerInformationProps {
   buyerInfo: BuyerInfo;
