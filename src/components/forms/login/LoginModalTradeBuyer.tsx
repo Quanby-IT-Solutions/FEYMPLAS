@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 // src/components/forms/LoginModal.tsx
-
+"use client";
 import { useRouter } from 'next/navigation';
 
 interface LoginModalProps {
@@ -10,7 +11,7 @@ interface LoginModalProps {
   loginType: 'Exhibitor' | 'Trade Buyer';
 }
 
-const LoginModal: React.FC<LoginModalProps> = ({ title, logoText, onClose, loginType }) => {
+const LoginModal: React.FC<LoginModalProps> = ({ title, logoText, onClose, loginType, }) => {
   const router = useRouter();
 
   // Function to handle registration navigation
@@ -26,42 +27,42 @@ const LoginModal: React.FC<LoginModalProps> = ({ title, logoText, onClose, login
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-50 flex items-center justify-center text-primary-2 bg-opacity-50"
       // Closes the modal when clicking outside
       onClick={onClose}
     >
       <div
-        className="flex w-full max-w-4xl bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300"
+        className="flex w-full max-w-[60%] bg-secondary-7 shadow-lg transition-colors duration-300"
         // Prevent close when clicking inside the modal
         onClick={(e) => e.stopPropagation()}
       >
         {/* Left Side - Logo */}
-        <div className="flex items-center justify-center w-2/5 bg-[#1f1a15] p-8">
-          <h1 className="text-white text-6xl font-bold">{logoText}</h1>
+        <div className="flex items-center justify-center w-full bg-primary-2 p-8">
+          <img className='px-12' src="assets/logo_white.png" alt="" />
         </div>
 
         {/* Right Side - Login Form */}
-        <div className="w-3/5 p-8">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{title}</h2>
+        <div className="w-full p-8 shadow-custom-shadow">
+          <h2 className="text-17xl leading-tight font-bold mb-6 capitalize">Login to your <br /> trade buyer account</h2>
           <form className="space-y-6">
             <input
               type="email"
               placeholder="Email"
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              className="w-full p-4 border border-secondary-5 focus:outline-secondary-5"
             />
             <input
               type="password"
               placeholder="Password"
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              className="w-full p-4 border border-secondary-5 focus:outline-secondary-5"
             />
-            <div className="flex justify-end">
-              <a href="#" className="text-sm text-gray-600 dark:text-gray-400 hover:underline">
+            <div className="flex justify-end ">
+              <a href="#" className="text-sm -mt-4 text-gray-600 dark:text-gray-400 hover:underline">
                 Forgot Password?
               </a>
             </div>
             <button
               type="submit"
-              className="w-full bg-[#656445] text-white py-2 rounded font-bold transition-colors duration-300"
+              className="w-full bg-secondary-5 text-white p-4 font-bold transition-colors duration-300"
             >
               LOGIN
             </button>

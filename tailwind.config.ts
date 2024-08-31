@@ -29,7 +29,7 @@ const config: Config = {
           4: '#2C2C2C', // Secondary 4
           5: '#6A704C', // Secondary 4
           6: '#CCB89D', // Secondary 4
-          7: '#F4F4F2', // bg-for some page
+          7: '#F4F4F2', // bg-for some page stone color
         },
         'timeless-black': '#000000',
         'timeless-white': '#FFFFFF',
@@ -52,21 +52,25 @@ const config: Config = {
         roboto: "Roboto",
       },
     },
+    writingMode: {
+      'vertical-rl': 'vertical-rl',
+    },
     fontSize: {
-      smi: "13px",
-      lg: "18px",
-      xl: "20px",
-      base: "16px",
+      'sm': "14px",
+      'smi': "13px",
+      'lg': "18px",
+      'xl': "20px",
+      'base': "16px",
       "21xl": "40px",
       "5xl": "24px",
       "13xl": "32px",
-      xs: "12px",
-      lgi: "19px",
+      'xs': "12px",
+      'lgi': "19px",
       "7xl": "26px",
       "41xl": "60px",
       "17xl": "36px",
       "29xl": "48px",
-      inherit: "inherit",
+      'inherit': "inherit",
     },
       boxShadow: {
         'custom-shadow': '0px 4px 16px 0px #2B271E4D', // Custom shadow
@@ -76,6 +80,7 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      
   },
   plugins: [],
 };

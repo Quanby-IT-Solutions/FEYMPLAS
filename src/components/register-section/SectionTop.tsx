@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import LoginModal from '../forms/LoginModal';
+import LoginModal from '../forms/login/LoginModalTradeBuyer';
 
 export default function Section1() {
     const [isModalOpen, setIsModalOpen] = useState(false);

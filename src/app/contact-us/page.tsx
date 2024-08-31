@@ -18,7 +18,7 @@ export default function ContactUs() {
 const ContactUsField = () => {
     return (
         <div className="w-full flex flex-col justify-center items-center gap-20">
-            <h1 className="font-bold text-5xl capitalize">Contact us</h1>
+            <h1 className="font-bold text-13xl capitalize">Contact us</h1>
             <img
                 className="object-cover w-full"
                 src="/assets/contact-us/1.png"
@@ -47,8 +47,8 @@ const ContactUsServices1 = () => {
                 <hr className="w-16 border border-primary-2" />
             </div>
             <div className="w-full flex flex-col gap-8">
-                <h1 className="text-4xl font-semibold">
-                    BE A <span className="font-serif font-medium text-[38px]">B</span>USINESS{" "}
+                <h1 className="text-5xl font-semibold">
+                    BE A <span className="font-serif font-medium text-5xl">B</span>USINESS{" "}
                     <br /> S<span className="italic font-serif font-medium">O</span>
                     LUTIONS PARTNER
                 </h1>
@@ -105,7 +105,7 @@ const ContactUsMidSection = () => {
             <div className="w-full  max-w-[80%] mx-auto flex flex-row pb-20 pt-28">
                 <div className="w-full max-w-[80%] mx-auto flex flex-row gap-20">
                     <div className="w-full flex flex-col gap-8 justify-start items-end">
-                        <h1 className="text-2xl font-semibold">MANILA FAME SECRETARIAT</h1>
+                        <h1 className="text-5xl font-semibold">MANILA FAME SECRETARIAT</h1>
                         <p className="text-right">
                             Center of International Trade Expositions and Missions (CITEM) <br />
                             Golden Shell Pavilion, Roxas Blvd. corner Sen. Gil Puyat Ave. Pasay <br />
