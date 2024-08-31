@@ -3,10 +3,11 @@
 
 import Button from "@/components/ui/Button";
 import VerticalText from "./VerticalText";
-import LoginFirstSection from "./exhibitor/LoginFirstSection";
-import LoginSecondSection from "./exhibitor/LoginSecondSection";
+import LoginFirstSection from "./trade-buyer/LoginFirstSection";
+import LoginSecondSection from "./trade-buyer/LoginSecondSection";
 import LoginModalTradeBuyer from "./LoginModalTradeBuyer";
 import LoginModalExhibitor from "./LoginModalExhibitor";
+import LoginExFirstSection from "./exhibitor/LoginExFirstSection";
 
 const LoginForm = () => {
   return (
@@ -20,9 +21,12 @@ const LoginForm = () => {
             </form> 
             */}
 
-      <LoginFirstSection />
-      <LoginSecondSection />
+      {/* <LoginFirstSection /> */}
 
+      <LoginExFirstSection />
+
+      {/* same content lang yng second section kaya import nalang kaini */}
+      <LoginSecondSection />
 
     </section>
   );

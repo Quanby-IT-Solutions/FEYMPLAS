@@ -42,7 +42,7 @@ export default function LoginFirstSection() {
             {/* right side */}
             <div className="w-full max-w-[35%]  bg-secondary-5 ">
               <div className="flex flex-col items-center justify-center w-full ">
-                <div className="writing-vertical-rl ml-[25%] py-10 text-white text-2xl font-bold">
+                <div className="writing-vertical-rl ml-[25%] py-14 text-13xl text-white font-bold">
                   <VerticalText text="EXHIBITOR" />
                 </div>
               </div>
