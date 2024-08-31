@@ -21,8 +21,10 @@ const LoginForm = () => {
             </form> 
             */}
 
+      {/* uncomment this if you want to use trade-buyer login design */}
       {/* <LoginFirstSection /> */}
 
+      {/* uncomment this if you want to use trade-buyer Exhibitor login design */}
       <LoginExFirstSection />
 
       {/* same content lang yng second section kaya import nalang kaini */}
