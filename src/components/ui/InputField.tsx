@@ -2,12 +2,13 @@
 
 interface InputFieldProps {
     label: string;
-    name: string; 
+    name: string;
     type?: string;
     placeholder?: string;
     value: string;
     required?: boolean;
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    helperText?: string[];
 }
 
 const InputField: React.FC<InputFieldProps> = ({
@@ -18,6 +19,7 @@ const InputField: React.FC<InputFieldProps> = ({
     value,
     required = false,
     onChange,
+    helperText,
 }) => {
     return (
         <div className="flex flex-col mb-4">
@@ -31,6 +33,13 @@ const InputField: React.FC<InputFieldProps> = ({
                 required={required}
                 className="p-2 border border-gray-300 rounded"
             />
+            {helperText && (
+                <div className="mt-1 text-sm text-gray-500">
+                    {helperText.map((text, index) => (
+                        <p key={index}>{text}</p>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };
