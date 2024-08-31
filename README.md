@@ -46,8 +46,6 @@ For more details, refer to the [Next.js deployment documentation](https://nextjs
 
 Happy coding with **Fame+ Manila**!
 
-```
-
 ### Changes Made:
 
 1. **Reorganized the Content**: Structured the README for clarity and flow.
@@ -55,4 +53,4 @@ Happy coding with **Fame+ Manila**!
 3. **Highlighted Key Features**: Emphasized the benefits of using Next.js and the features of the project.
 4. **Improved Deployment Instructions**: Made deployment instructions clearer with a direct link to Vercel.
 5. **Conciseness**: Kept the README short but informative, focusing on essential information.
-````
+
