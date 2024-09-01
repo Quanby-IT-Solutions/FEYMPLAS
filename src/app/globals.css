@@ -34,3 +34,11 @@ body {
 .landing-bg {
   background-color: rgb(237, 225, 209, 80%);
 }
+
+.scroll-none::-webkit-scrollbar-button {
+  display: none;
+}
+.scroll-none::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
