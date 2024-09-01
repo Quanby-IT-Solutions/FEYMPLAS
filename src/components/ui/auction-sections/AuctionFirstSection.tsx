@@ -3,7 +3,7 @@ export const AuctionFirstSection = () => {
     <div className="w-full h-[calc(100vh-20vh)] relative border border-black tracking-wide">
       {/* Video background */}
       <div className=" w-full h-full absolute inset-0 z-0">
-        <video className="h-full w-full object-cover" autoPlay loop>
+        <video className="h-full w-full object-cover" autoPlay loop muted>
           <source src="/assets/auction/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

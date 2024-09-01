@@ -69,7 +69,7 @@ export const AuctionSecondSection = () => {
   ];
 
   return (
-    <div className="w-full p-4 bg-white">
+    <div className="w-full bg-white">
       <div className="w-full overflow-x-auto scroll-none">
         <div className="flex space-x-8 pb-4 items-end">
           {upcomingAuctions.map((auction) => (

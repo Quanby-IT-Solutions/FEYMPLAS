@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-<<<<<<<< HEAD:src/components/Reviews.tsx
+
 import { profile } from "console";
 
-export default function Reviews() {
-========
+
 export default function CustomerReview() {
->>>>>>>> cd134e3af61c2d97b3297790f8dd1d4b9c54c8e6:src/components/forms/login/CustomerReview.tsx
+
   const reviewers = [
     {
       name: "Pedro Ibanez",
