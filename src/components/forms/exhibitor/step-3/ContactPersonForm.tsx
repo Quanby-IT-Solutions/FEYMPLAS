@@ -1,7 +1,11 @@
+// src/components/forms/exhibitor/step-3/ContactPersonForm.tsx
+
+import Image from "next/image";
+
+import { ExhibitorInfo } from "@/interfaces/exhibitor";
+
 import InputField from "@/components/ui/InputField";
 import CheckboxField from "@/components/ui/CheckboxField";
-import Image from "next/image";
-import { ExhibitorInfo } from "@/interfaces/exhibitor";
 
 interface ContactPersonFormProps {
   data: ExhibitorInfo;

@@ -1,7 +1,7 @@
 // src/components/forms/trade-buyer/step-1/ManilaFameSection.tsx
 
 import CheckboxField from '@/components/ui/CheckboxField';
-import SectionHeader from '../../SectionHeader';
+import SectionHeader from '../../../ui/SectionHeader';
 import { BuyerInfo } from '@/interfaces/trade-buyer';
 
 interface ManilaFameSectionProps {

@@ -5,6 +5,10 @@ import { ExhibitorInfo } from "@/interfaces/exhibitor";
 import EventSelection from "@/components/forms/exhibitor/step-1/EventSelection";
 import BasicInformation from "@/components/forms/exhibitor/step-2/BasicInformation";
 import ContactDetails from "@/components/forms/exhibitor/step-3/ContactDetails";
+import BusinessRegistration from "@/components/forms/exhibitor/step-4/BusinessRegistration";
+import Documents from "@/components/forms/exhibitor/step-5/Documents";
+import ParticipationDetails from "@/components/forms/exhibitor/step-6/ParticipationDetails";
+import SummaryPage from "@/components/forms/exhibitor/step-7/SummaryPage";
 
 const useExhibitorForm = () => {
     const [step, setStep] = useState(1);
@@ -14,24 +18,54 @@ const useExhibitorForm = () => {
     // Define formData with proper type
     const [formData, setFormData] = useState<{ exhibitorInfo: ExhibitorInfo }>({
         exhibitorInfo: {
-            companyName: '',
-            contactPerson: '',
-            phoneNumber: '',
-            email: '',
-            password: '',
-            confirmPassword: '',
-            event: "",
-            participationType: "",
-            edition: "",
-            agreeToTerms: false,
-            sameAsOfficeAddress: false,
-            noFactoryAddress: false,
-            country: undefined,
-            region: undefined,
-            province: undefined,
-            city: undefined,
-            zipCode: "",
-            street: "",
+            username: "",
+            businessRegisteredInPhilippines: false,
+            pastParticipation: false,
+            officeAddress: "",
+            factoryAddress: "",
+            website: "",
+            mobileAppsLinked: false,
+            philexportMember: false,
+            financialStatement: null,
+            mayorPermit: null,
+            productPhotos: [],
+            philexportDocument: null,
+            participatingIn: "",
+            participatingAs: "",
+            participationPackage: "",
+            boothSizeRequirement: "",
+            spaceBoothCost: "",
+            fameSubscriptionFee: "",
+            packageCostEstimate: "",
+            promotionalName: "",
+            majorityProductsShowcased: "",
+            boothOption: "",
+            philexportMembership: "",
+            packagingName: "",
+            boothSize: "",
+            boothName: "",
+            productCategory: "",
+            brandStoryOption: "",
+            brandStoryWriteup: "",
+            yearEstablished: "",
+            businessPermitValidity: "",
+            industryAffiliation: "",
+            businessMobile: "",
+            companySize: "",
+            directWorkers: "",
+            indirectWorkers: "",
+            organizationType: "",
+            natureOfBusiness: "",
+            tradeExperience: "",
+            exportCountries: "",
+            orderTypes: [],
+            marketSegment: "",
+            homeDecorCategories: [],
+            facebook: "",
+            instagram: "",
+            twitter: "",
+            linkedin: "",
+            directory: "",
             firstName: "",
             middleInitial: "",
             lastName: "",
@@ -42,11 +76,24 @@ const useExhibitorForm = () => {
             weChat: false,
             whatsApp: false,
             emailAddress: "",
-            facebook: "",
-            instagram: "",
-            twitter: "",
-            linkedin: "",
-            directory: ""
+            phoneNumber: "",
+            sameAsOfficeAddress: false,
+            noFactoryAddress: false,
+            country: undefined,
+            region: undefined,
+            province: undefined,
+            city: undefined,
+            zipCode: "",
+            street: "",
+            companyName: "",
+            email: "",
+            contactPerson: "",
+            password: "",
+            confirmPassword: "",
+            edition: "",
+            agreeToTerms: false,
+            event: "",
+            participationType: ""
         },
     });
 
@@ -60,7 +107,7 @@ const useExhibitorForm = () => {
         }));
     };
 
-    const handleNext = () => setStep((prev) => Math.min(prev + 1, 5));
+    const handleNext = () => setStep((prev) => Math.min(prev + 1, 7));
     const handlePrev = () => setStep((prev) => Math.max(prev - 1, 1));
 
     const handleSubmit = () => {
@@ -80,8 +127,8 @@ const useExhibitorForm = () => {
                     <EventSelection
                         data={formData.exhibitorInfo}
                         updateData={(data) => updateFormData('exhibitorInfo', data)}
-                        handleNext={handleNext}
                         handlePrev={handlePrev}
+                        handleNext={handleNext}
                     />
                 );
             case 2:
@@ -89,8 +136,8 @@ const useExhibitorForm = () => {
                     <BasicInformation
                         data={formData.exhibitorInfo}
                         updateData={(data) => updateFormData('exhibitorInfo', data)}
-                        handleNext={handleNext}
                         handlePrev={handlePrev}
+                        handleNext={handleNext}
                     />
                 );
             case 3:
@@ -98,8 +145,44 @@ const useExhibitorForm = () => {
                     <ContactDetails
                         data={formData.exhibitorInfo}
                         updateData={(data) => updateFormData('exhibitorInfo', data)}
-                        handleNext={handleNext}
                         handlePrev={handlePrev}
+                        handleNext={handleNext}
+                    />
+                );
+            case 4:
+                return (
+                    <BusinessRegistration
+                        data={formData.exhibitorInfo}
+                        updateData={(data) => updateFormData('exhibitorInfo', data)}
+                        handlePrev={handlePrev}
+                        handleNext={handleNext}
+                    />
+                );
+            case 5:
+                return (
+                    <Documents
+                        data={formData.exhibitorInfo}
+                        updateData={(data) => updateFormData('exhibitorInfo', data)}
+                        handlePrev={handlePrev}
+                        handleNext={handleNext}
+                    />
+                );
+            case 6:
+                return (
+                    <ParticipationDetails
+                        data={formData.exhibitorInfo}
+                        updateData={(data) => updateFormData('exhibitorInfo', data)}
+                        handlePrev={handlePrev}
+                        handleNext={handleNext}
+                    />
+                );
+            case 7:
+                return (
+                    <SummaryPage
+                        data={formData.exhibitorInfo}
+                        updateData={(data) => updateFormData('exhibitorInfo', data)}
+                        handlePrev={handlePrev}
+                        handleSubmit={handleSubmit}
                     />
                 );
             default:

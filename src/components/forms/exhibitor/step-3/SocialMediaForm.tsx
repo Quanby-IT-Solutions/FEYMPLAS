@@ -1,6 +1,8 @@
-import InputField from "@/components/ui/InputField";
+// src/components/forms/exhibitor/step-3/SocialMediaForm.tsx
+
 import { ExhibitorInfo } from "@/interfaces/exhibitor";
 
+import InputField from "@/components/ui/InputField";
 interface SocialMediaFormProps {
   data: ExhibitorInfo;
   updateData: (data: Partial<ExhibitorInfo>) => void;

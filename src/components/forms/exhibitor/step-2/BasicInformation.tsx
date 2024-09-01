@@ -1,11 +1,14 @@
 // src/components/forms/exhibitor/step-2/BasicInformation.tsx
 
+import Image from "next/image";
+
+import { ExhibitorInfo } from "@/interfaces/exhibitor";
+
 import ProgressBar from "@/components/ui/ProgressBar";
 import CheckboxField from "@/components/ui/CheckboxField";
 import InputField from "@/components/ui/InputField";
 import RadioGroup from "@/components/ui/RadioGroup";
 import NavigationButtons from "@/components/ui/NavigationButtons";
-import { ExhibitorInfo } from "@/interfaces/exhibitor";
 
 interface BasicInformationProps {
   data: ExhibitorInfo;
@@ -132,11 +135,14 @@ const BasicInformation: React.FC<BasicInformationProps> = ({
                 />
               </div>
             </div>
+            {/* Fixed Image Component */}
             <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-              <img
+              <Image
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/d122bf4c3e3f9824c0fc96ddec331029057f47792dab93297bee98a669ff2cdd?placeholderIfAbsent=true&apiKey=bcd25a482c724058b98e564e8bbde85d"
                 alt="Exhibitor registration illustration"
+                width={500}
+                height={345}
                 className="object-contain grow w-full aspect-[0.69] max-md:mt-10 max-md:max-w-full"
               />
             </div>
