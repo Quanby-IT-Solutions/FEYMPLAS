@@ -1,4 +1,5 @@
 import Reviews from "@/components/Reviews";
+import Services2 from "@/components/Services2";
 import { AuctionFirstSection } from "@/components/ui/auction-sections/AuctionFirstSection";
 import { AuctionFourthSection } from "@/components/ui/auction-sections/AuctionFourthSection";
 import { AuctionSecondSection } from "@/components/ui/auction-sections/AuctionSecondSection";
@@ -63,11 +64,11 @@ export default function Auction() {
         </div>
         <AuctionThirdSection />
       </section>
-      <section className="w-full flex justify-center items-center py-16">
+      <section className="w-full h-[calc(100vh-10vh)] flex justify-center items-center py-16 pb-24">
         <AuctionFourthSection />
       </section>
-      <section className="w-full">
-        
+      <section className="w-full py-16">
+        <Services2 />
       </section>
       <section className="w-full">
         <Reviews />

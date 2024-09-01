@@ -20,7 +20,7 @@ const FirstSection = () => {
   return (
     <div className="w-full flex flex-col justify-center gap-8 items-center py-8 ">
       <div className="w-full max-w-[80%] flex flex-col gap-10">
-        <h1 className="text-13xl font-bold text-center">About Us</h1>
+        <h1 className="text-18xl font-bold text-center">About Us</h1>
         <Buttons />
         <div className="w-full font-[300]">
           <div className="flex flex-row gap-2 justify-start items-center">
@@ -52,7 +52,7 @@ const FirstSection = () => {
 const FirstDiv = () => {
   return (
     <div className="w-full flex flex-col justify-start items-start gap-10 tracking-wide">
-      <h1 className="text-5xl font-bold">
+      <h1 className="text-13xl font-bold">
         PHILIPPINE DESIGN <br /> AND BEYOND
       </h1>
       <p>
@@ -136,7 +136,7 @@ const SecondSection = () => {
 const SecondDiv = () => {
   return (
     <div className="flex flex-col justify-start items-start gap-6 tracking-wide">
-      <h1 className="text-3xl font-bold max-w-sm">
+      <h1 className="text-13xl font-bold max-w-md leading-snug">
         THE PHILIPPINES PREMIER DESIGN AND LIFESTYLE EVENT
       </h1>
       <p className="">

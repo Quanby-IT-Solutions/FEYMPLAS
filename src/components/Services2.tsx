@@ -1,7 +1,7 @@
-export default function Services() {
+export default function Services2() {
     return (
-        <div className="w-full flex flex-col justify-center items-center gap-16">
-            <div className="w-full flex flex-row justify-center items-center gap-20 max-w-[80%] overflow-hidden">
+        <div className="w-full flex flex-col justify-center items-center gap-16  py-16 bg-secondary-1">
+            <div className="w-full flex flex-row justify-center items-center gap-20 max-w-[80%]  overflow-hidden">
                 <ServicesDiv1 />
                 <ServicesDiv2 />
             </div>
@@ -14,7 +14,7 @@ const ServicesDiv1 = () => {
         <div className="w-full max-w-[50%] flex flex-col">
             <div className="w-full flex flex-row gap-2 justify-start items-center pb-2">
                 <p>Services</p>
-                <hr className="w-16 border border-primary-2" />
+                <hr className="w-16 border border-timeless-white" />
             </div>
             <div className="w-full flex flex-col gap-8">
                 <h1 className="text-17xl font-semibold">
@@ -33,10 +33,10 @@ const ServicesDiv1 = () => {
                     <div className="w-full flex flex-row gap-4 pl-1">
                         <input
                             type="text"
-                            className="w-full p-3 pl-6 border border-secondary-5 bg-timeless-white placeholder:text-secondary-5 focus:outline-secondary-5"
+                            className="w-full p-3 pl-6 text-timeless-black border border-secondary-5 bg-timeless-white placeholder:text-secondary-1 focus:outline-secondary-1"
                             placeholder="Enter your email address to get started"
                         />
-                        <button className="uppercase p-3 w-44 bg-secondary-5 text-timeless-white">
+                        <button className="uppercase p-3 w-44 bg-timeless-white text-secondary-1">
                             Submit
                         </button>
                     </div>
