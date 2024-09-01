@@ -1,18 +1,18 @@
+// src/components/layouts/header/Header.tsx
+
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import React from 'react';
+import { useState } from 'react';
+import NavLink from './NavLink';
+import AuthButton from './AuthButton';
+import HamburgerMenu from './HamburgerMenu';
 
 const Header: React.FC = () => {
-  const pathname = usePathname();
-
-  // Helper function to check if the link is active
-  const isActive = (path: string) => pathname === path;
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className='flex items-center justify-between bg-white h-[100px] p-[28px_167px_29px_167px] gap-10 mx-auto opacity-100 top-0 z-50'>
+    <header className='flex items-center justify-between bg-white h-[80px] p-4 lg:p-6 xl:px-[167px] xl:py-[28px] gap-4 md:gap-10 mx-auto opacity-100 top-0 z-50 shadow-md'>
       {/* Logo Section */}
       <div className='logo'>
         <Image
@@ -20,117 +20,46 @@ const Header: React.FC = () => {
           alt='Company logo'
           width={73}
           height={73}
-          className='object-contain shrink-0 self-stretch my-auto aspect-[4.88] w-[73px]'
+          className='object-contain shrink-0'
           loading='lazy'
         />
       </div>
 
+      {/* Hamburger Menu for Mobile */}
+      <HamburgerMenu onClick={() => setMenuOpen(!isMenuOpen)} isOpen={isMenuOpen} />
+
       {/* Navigation Links */}
-      <nav className='text-[#2B271E] flex items-center xl:gap-6 2xl:gap-9 2xl:text-lg xl:text-sm'>
-        {/* Home Link with Custom Design When Active */}
-        <Link href='/' className={`tracking-tighter ${isActive('/') ? 'font-bold text-black' : 'text-gray-700'}`}>
-          {isActive('/') ? (
-            <>
-              H<i className='pr-[2px]'>O</i>ME
-            </>
-          ) : (
-            'Home'
-          )}
-        </Link>
-
-        {/* Manila Fame Link with Custom Design When Active */}
-        <Link
-          href='/manila-fame'
-          className={`tracking-tighter ${isActive('/manila-fame') ? 'font-bold text-black' : 'text-gray-700'}`}
-        >
-          {isActive('/manila-fame') ? (
-            <>
-              M<i className='pr-[2px]'>A</i>NILA FAME
-            </>
-          ) : (
-            'Manila Fame'
-          )}
-        </Link>
-
-        {/* Spotlight Link with Custom Design When Active */}
-        <Link
-          href='/spotlight'
-          className={`tracking-tighter ${isActive('/spotlight') ? 'font-bold text-black' : 'text-gray-700'}`}
-        >
-          {isActive('/spotlight') ? (
-            <>
-              S<i className='pr-[2px]'>P</i>OTLIGHT
-            </>
-          ) : (
-            'Spotlight'
-          )}
-        </Link>
-
-        {/* Stories Link with Custom Design When Active */}
-        <Link
-          href='/stories'
-          className={`tracking-tighter ${isActive('/stories') ? 'font-bold text-black' : 'text-gray-700'}`}
-        >
-          {isActive('/stories') ? (
-            <>
-              S<i className='pr-[2px]'>T</i>ORIES
-            </>
-          ) : (
-            'Stories'
-          )}
-        </Link>
-
-        {/* Auction Link with Custom Design When Active */}
-        <Link
-          href='/auction'
-          className={`tracking-tighter ${isActive('/auction') ? 'font-bold text-black' : 'text-gray-700'}`}
-        >
-          {isActive('/auction') ? (
-            <>
-              A<i className='pr-[2px]'>U</i>CTION
-            </>
-          ) : (
-            'Auction'
-          )}
-        </Link>
-
-        {/* Catalogue Link with Custom Design When Active */}
-        <Link
-          href='/catalogue'
-          className={`tracking-tighter ${isActive('/catalogue') ? 'font-bold text-black' : 'text-gray-700'}`}
-        >
-          {isActive('/catalogue') ? (
-            <>
-              C<i className='pr-[2px]'>A</i>TALOGUE
-            </>
-          ) : (
-            'Catalogue'
-          )}
-        </Link>
-
-        {/* About Us Link with Custom Design When Active */}
-        <Link
-          href='/about-us'
-          className={`tracking-tighter ${isActive('/about-us') ? 'font-bold text-black' : 'text-gray-700'}`}
-        >
-          {isActive('/about-us') ? (
-            <>
-              A<i className='pr-[2px]'>B</i>OUT US
-            </>
-          ) : (
-            'About Us'
-          )}
-        </Link>
+      <nav
+        className={`fixed md:static left-0 top-0 w-full h-full md:h-auto md:w-auto md:flex items-center justify-center bg-white md:bg-transparent z-40 transition-transform duration-300 ease-in-out ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full md:translate-x-0'
+          }`}
+      >
+        <div className='flex flex-col md:flex-row items-center md:gap-6 xl:gap-8 mt-20 md:mt-0'>
+          <NavLink href='/' label='Home' activeLabel={<><i className='pr-[2px]'>O</i>ME</>} />
+          <NavLink href='/manila-fame' label='Manila Fame' activeLabel={<><i className='pr-[2px]'>A</i>NILA FAME</>} />
+          <NavLink href='/spotlight' label='Spotlight' activeLabel={<><i className='pr-[2px]'>P</i>OTLIGHT</>} />
+          <NavLink href='/stories' label='Stories' activeLabel={<><i className='pr-[2px]'>T</i>ORIES</>} />
+          <NavLink href='/auction' label='Auction' activeLabel={<><i className='pr-[2px]'>U</i>CTION</>} />
+          <NavLink href='/catalogue' label='Catalogue' activeLabel={<><i className='pr-[2px]'>A</i>TALOGUE</>} />
+          <NavLink href='/about-us' label='About Us' activeLabel={<><i className='pr-[2px]'>B</i>OUT US</>} />
+          {/* Authentication Buttons for Mobile */}
+          <div className='flex flex-col items-center gap-4 mt-6 md:hidden px-8 w-full'>
+            <AuthButton href='/login' label='Login' mobile />
+            <AuthButton href='/register' label='Register' primary mobile />
+          </div>
+          {/* Close Menu Button for Mobile */}
+          <button
+            className='md:hidden text-black absolute top-4 right-4 focus:outline-none'
+            onClick={() => setMenuOpen(false)}
+          >
+            ✕
+          </button>
+        </div>
       </nav>
 
-      {/* Authentication Buttons */}
-      <div className='xl:text-sm 2xl:text-lg'>
-        <Link href='/login' className='text-[#6A704C] 2xl:px-6 2xl:py-3 xl:py-2 xl:px-4 text-bold'>
-          Login
-        </Link>
-        <Link href='/register' className='bg-primary-2 text-white px-6 py-3 text-bold xl:py-2 xl:px-4 shadow-custom-shadow'>
-          Register
-        </Link>
+      {/* Authentication Buttons for Desktop */}
+      <div className='hidden md:flex items-center gap-4 xl:text-sm 2xl:text-lg'>
+        <AuthButton href='/login' label='Login' />
+        <AuthButton href='/register' label='Register' primary />
       </div>
     </header>
   );
