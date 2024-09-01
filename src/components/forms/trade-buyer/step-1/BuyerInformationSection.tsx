@@ -1,7 +1,7 @@
 // src/components/forms/trade-buyer/step-1/BuyerInformationSection.tsx
 
 import InputField from '@/components/ui/InputField';
-import SectionHeader from '../../SectionHeader';
+import SectionHeader from '../../../ui/SectionHeader';
 import { BuyerInfo } from '@/interfaces/trade-buyer';
 
 interface BuyerInformationSectionProps {

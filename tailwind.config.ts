@@ -69,6 +69,8 @@ const config: Config = {
       "7xl": "26px",
       "41xl": "60px",
       "17xl": "36px",
+      "18xl": "40px",
+      "19xl": "44px",
       "29xl": "48px",
       'inherit': "inherit",
     },

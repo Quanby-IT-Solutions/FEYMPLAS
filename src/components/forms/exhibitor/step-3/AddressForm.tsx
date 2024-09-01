@@ -1,4 +1,7 @@
+// src/components/forms/exhibitor/step-3/AddressForm.tsx
+
 import Image from 'next/image';
+
 import InputField from "@/components/ui/InputField";
 import CheckboxField from "@/components/ui/CheckboxField";
 import { ExhibitorInfo } from "@/interfaces/exhibitor";

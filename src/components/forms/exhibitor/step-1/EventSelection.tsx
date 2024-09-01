@@ -1,9 +1,9 @@
 // src/components/forms/exhibitor/step-1/EventSelection.tsx
 
-import ProgressBar from "@/components/ui/ProgressBar";
 import { ExhibitorInfo } from "@/interfaces/exhibitor";
+import ProgressBar from "@/components/ui/ProgressBar";
+import FeatureCard from "@/components/ui/FeatureCard";
 import NavigationButtons from "@/components/ui/NavigationButtons";
-import FeatureCard from "./FeatureCard";
 
 interface EventSelectionProps {
   data: ExhibitorInfo;

@@ -21,7 +21,7 @@ export default function Footer() {
   const FooterContentLeft = () => {
     return (
       <div className="flex flex-col justify-start items-start gap-6 tracking-wide font-[300]">
-        <h1 className="text-3xl font-bold w-full max-w-sm mt-2">
+        <h1 className="text-18xl font-bold w-full max-w-sm mt-2 leading-snug">
           Can’t get enough of Fame+?
         </h1>
         <p>

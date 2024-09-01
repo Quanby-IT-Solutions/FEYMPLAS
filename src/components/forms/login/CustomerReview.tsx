@@ -1,5 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+
+import { profile } from "console";
+
+
 export default function CustomerReview() {
+
   const reviewers = [
     {
       name: "Pedro Ibanez",
