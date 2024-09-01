@@ -1,8 +1,8 @@
 import SectionTop from "./SectionTop";
-import SectionBottom from "./SectionBottom";
+import CustomerReview from "../forms/login/CustomerReview";
 
 export default function RegisterSection() {
     return (
-        <><SectionTop /><SectionBottom /></>
+        <section className="w-full text-primary-2 flex flex-col gap-20"><SectionTop /><CustomerReview /></section>
     );
 }

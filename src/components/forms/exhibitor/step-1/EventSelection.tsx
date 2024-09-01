@@ -109,7 +109,7 @@ const EventSelection: React.FC<EventSelectionProps> = ({
           handlePrev={handlePrev}
           handleNext={handleNext}
           isSubmit={false}
-          showPrev={true}
+          showPrev={false}
           showNext={true}
         />
       </form>

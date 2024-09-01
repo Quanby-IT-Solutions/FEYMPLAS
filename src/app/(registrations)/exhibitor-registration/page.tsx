@@ -21,7 +21,12 @@ const ExhibitorRegistrationForm: React.FC = () => {
         <ThankYouModal accountType="Exhibitor" onClose={() => setShowModal(false)} />
       ) : (
         <div className="shadow-lg rounded-lg bg-white py-20">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center">CREATE YOUR EXHIBITOR ACCOUNT</h1>
+          <h1 className="text-17xl font-semibold text-center">
+            CR<span className="italic font-serif font-medium">E</span>ATE YOUR EXHIBITOR
+            <div>
+              <span className=" font-serif">A</span>CCOUNT
+            </div>
+          </h1>
           {renderStep()}
         </div>
       )}

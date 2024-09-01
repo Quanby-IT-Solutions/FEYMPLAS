@@ -21,7 +21,12 @@ const TradeBuyerRegistrationForm: React.FC = () => {
         <ThankYouModal accountType="Trade Buyer" onClose={() => setShowModal(false)} />
       ) : (
         <div className="shadow-lg rounded-lg bg-white py-20">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center">CREATE YOUR TRADE BUYER ACCOUNT</h1>
+          <h1 className="text-17xl font-semibold text-center">
+            CR<span className="italic font-serif font-medium">E</span>ATE YOUR TRADE
+            <div>BUYER{" "}
+              <span className=" font-serif">A</span>CCOUNT
+            </div>
+          </h1>
           {renderStep()}
         </div>
       )}
