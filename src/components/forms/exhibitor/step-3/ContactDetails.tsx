@@ -1,3 +1,5 @@
+// src/components/forms/exhibitor/step-3/ContactDetails.tsx
+
 import Image from 'next/image';
 
 import ContactForm from "./ContactForm";
