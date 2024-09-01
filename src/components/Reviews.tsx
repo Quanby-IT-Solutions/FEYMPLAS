@@ -27,7 +27,7 @@ export default function Reviews() {
   return (
     <div className="w-full h-full pt-12 flex justify-center items-center">
       <div className="w-full max-w-[80%] flex flex-col gap-8">
-        <div className="w-full flex flex-col gap-2 justify-start items-start">
+        <div className="w-full flex flex-col gap-2 justify-start items-start text-primary-2">
           <div className="w-full flex flex-row gap-2 justify-start items-center">
             <p>Reviews</p>
             <hr className="w-16 border border-primary-2" />
@@ -42,8 +42,8 @@ export default function Reviews() {
               key={reviewer.name}
               className="w-full flex flex-col gap-4 justify-between items-start p-8 h-[350px] bg-primary-2"
             >
-              <p>{reviewer.comment}</p>
-              <div className="w-full flex flex-row gap-4">
+              <p className={`${reviewer.comment.length > 250 ? "line-clamp-[7]" : ""}`}>{reviewer.comment}</p>
+              <div className={"w-full flex flex-row gap-4 justify-start items-center"}>
                 <img
                   src={reviewer.profile}
                   className="w-12 h-12 rounded-full"

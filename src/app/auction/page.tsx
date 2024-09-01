@@ -1,11 +1,14 @@
+import Reviews from "@/components/Reviews";
 import { AuctionFirstSection } from "@/components/ui/auction-sections/AuctionFirstSection";
+import { AuctionFourthSection } from "@/components/ui/auction-sections/AuctionFourthSection";
 import { AuctionSecondSection } from "@/components/ui/auction-sections/AuctionSecondSection";
+import { AuctionThirdSection } from "@/components/ui/auction-sections/AuctionThirdSection";
 import { Buttons } from "@/components/ui/auction-sections/Buttons";
 
 export default function Auction() {
   return (
     <div className="w-full flex flex-col justify-center items-center tracking-wide text-lg">
-      <div className="w-full py-6 text-timeless-black relative flex justify-center items-center">
+      <section className="w-full py-6 text-timeless-black relative flex justify-center items-center">
         <h1 className="text-[70px] font-bold mx-auto">
           AUCTI<span className="italic font-serif font-medium">O</span>N +
         </h1>
@@ -14,14 +17,17 @@ export default function Auction() {
             FaQ&apos;s
           </button>
         </div>
-      </div>
+      </section>
       <AuctionFirstSection />
-      <div className="w-full flex flex-row gap-4 justify-center items-center py-16 mt-4">
+      <section className="w-full flex flex-row gap-4 justify-center items-center py-16 mt-4">
         <Buttons />
-      </div>
-      <div className="w-full relative text-primary-2 flex flex-col justify-center items-center border border-black">
-        <div className=" absolute top-[5%] left-[55%] -translate-x-1/2 z-20 border border-black">
-          <a href="#" className="text-lg font-[300] uppercase text-secondary-5 flex">
+      </section>
+      <section className="w-full relative text-primary-2 flex flex-col justify-center items-center">
+        <div className=" absolute top-[5%] left-[55%] -translate-x-1/2 z-20">
+          <a
+            href="#"
+            className="text-lg font-[300] uppercase text-secondary-5 flex"
+          >
             View all{" "}
             <svg
               width="24"
@@ -42,7 +48,30 @@ export default function Auction() {
           </h1>
         </div>
         <AuctionSecondSection />
-      </div>
+      </section>
+      <section className="w-full flex flex-col justify-center items-center py-16">
+        <div className="w-full max-w-[80%]  pb-16">
+          <div className="flex flex-row gap-2 justify-start items-center text-primary-2">
+            <p>Browse Products</p>
+            <hr className="w-16 border border-primary-2" />
+          </div>
+          <h1 className="text-17xl font-semibold text-primary-2">
+            AV<span className="font-serif italic font-medium">A</span>ILABLE F
+            <span className="font-serif italic font-medium">O</span>R IMMEDIATE
+            <span className="font-serif font-medium"> P</span>URCHASE
+          </h1>
+        </div>
+        <AuctionThirdSection />
+      </section>
+      <section className="w-full flex justify-center items-center py-16">
+        <AuctionFourthSection />
+      </section>
+      <section className="w-full">
+        
+      </section>
+      <section className="w-full">
+        <Reviews />
+      </section>
     </div>
   );
 }
