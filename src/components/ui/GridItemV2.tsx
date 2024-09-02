@@ -156,7 +156,7 @@ const GridItemV2: React.FC<GridItemProps> = ({
           </div>
         </div>
         <img
-          className="absolute left-[239px] w-[90px] h-[43.6px] z-30"
+          className="absolute left-[220px] w-[90px] h-[43.6px] z-30"
           loading="lazy"
           alt=""
           src="/assets/stories-touchpoint/mask.png"
