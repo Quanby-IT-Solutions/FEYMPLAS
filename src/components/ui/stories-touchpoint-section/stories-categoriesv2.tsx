@@ -23,6 +23,20 @@ const gridItems = [
     goto: "/invited-guests",
   },
 
+  {
+    title: "Invited Guests",
+    subtitle: "(with invite code)",
+    imageSrc: "/assets/auction/candles.png",
+    goto: "/invited-guests",
+  },
+
+  {
+    title: "Invited Guests",
+    subtitle: "(with invite code)",
+    imageSrc: "/assets/auction/candles.png",
+    goto: "/invited-guests",
+  },
+
 
 ];
 

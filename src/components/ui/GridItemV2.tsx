@@ -61,6 +61,14 @@ const GridItemV2: React.FC<GridItemProps> = ({
   };
 
   const overlayVariants = {
+    initial: { opacity: 0.2 },
+    hover: {
+      opacity: 0.5,
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
+  };
+
+  const borderVariants = {
     initial: { opacity: 0 },
     hover: {
       opacity: 1,
@@ -113,7 +121,7 @@ const GridItemV2: React.FC<GridItemProps> = ({
         className="relative w-full overflow-hidden"
         variants={imageContainerVariants}
       >
-        <motion.div variants={imageVariants}>
+        <motion.div variants={imageVariants} className="relative w-full h-full">
           <Image
             src={imageSrc}
             alt={title}
@@ -121,22 +129,17 @@ const GridItemV2: React.FC<GridItemProps> = ({
             objectFit="cover"
           />
         </motion.div>
-        <AnimatePresence>
-          {isHovered && (
-            <motion.div
-              className="absolute inset-0 bg-black bg-opacity-30 pointer-events-none"
-              variants={overlayVariants}
-              initial="initial"
-              animate="hover"
-              exit="initial"
-            />
-          )}
-        </AnimatePresence>
+        <motion.div
+          className="absolute inset-0 bg-black pointer-events-none"
+          variants={overlayVariants}
+          initial="initial"
+          animate={isHovered ? "hover" : "initial"}
+        />
         <AnimatePresence>
           {isHovered && (
             <motion.div
               className="absolute inset-0 border-4 border-darkolivegreen pointer-events-none"
-              variants={overlayVariants}
+              variants={borderVariants}
               initial="initial"
               animate="hover"
               exit="initial"
@@ -147,13 +150,13 @@ const GridItemV2: React.FC<GridItemProps> = ({
           className="absolute inset-0 flex items-center justify-center"
           style={{ top: "12.3px", padding: "59px 10px" }}
         >
-          <div className="relative font-semibold z-10 text-white text-center">
+          <div className="relative font-semibold z-20 text-white text-center">
             <p className="m-0">{title}</p>
             {subtitle && <p className="m-0">{subtitle}</p>}
           </div>
         </div>
         <img
-          className="absolute left-[239px] w-[90px] h-[43.6px] z-10"
+          className="absolute left-[239px] w-[90px] h-[43.6px] z-30"
           loading="lazy"
           alt=""
           src="/assets/stories-touchpoint/mask.png"
@@ -167,7 +170,7 @@ const GridItemV2: React.FC<GridItemProps> = ({
         initial="initial"
         animate={isHovered ? "hover" : "initial"}
         style={{
-          zIndex: 10,
+          zIndex: 40,
           bottom: "-1rem",
           left: "0",
         }}
