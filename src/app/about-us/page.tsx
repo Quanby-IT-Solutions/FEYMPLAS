@@ -21,7 +21,9 @@ const FirstSection = () => {
     <div className="w-full flex flex-col justify-center gap-8 items-center py-8 ">
       <div className="w-full max-w-[80%] flex flex-col gap-10">
         <h1 className="text-18xl font-bold text-center">About Us</h1>
-        <Buttons />
+        <div className="pb-12 w-full flex flex-row justify-center items-center gap-6  text-secondary-5">
+          <Buttons />
+        </div>
         <div className="w-full font-[300]">
           <div className="flex flex-row gap-2 justify-start items-center">
             <p>FAME+</p>
@@ -40,8 +42,8 @@ const FirstSection = () => {
           </div>
           <div className="w-full flex items-center justify-center">
             <p>
-              FAME+ is published by the Center for International Trade Expositions
-              & Missions (CITEM).{" "}
+              FAME+ is published by the Center for International Trade
+              Expositions & Missions (CITEM).{" "}
             </p>
           </div>
         </div>
@@ -87,25 +89,25 @@ const FirstDiv = () => {
   );
 };
 
-const Buttons = () => {
+export const Buttons = () => {
   const buttonNames = ["FAME+", "Manila FAME", "CITEM"];
   return (
-    <div className="pb-12 w-full flex flex-row justify-center items-center gap-6  text-secondary-5">
+    <>
       {buttonNames.map((name, index) => (
         <button
           key={index}
           type="button"
-          className="px-4 py-1.5 w-full min-w-52 max-w-52 border border-secondary-5 "
+          className="px-4 py-1.5 w-full min-w-52 max-w-52 z-10 border border-secondary-5 text-secondary-5 hover:bg-secondary-5 hover:text-timeless-white duration-300"
         >
           About {name}
         </button>
       ))}
-    </div>
+    </>
   );
 };
 
 // Second Section
-const SecondSection = () => {
+export const SecondSection = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center py-8">
       <div className="w-full max-w-[80%] flex flex-col justify-center items-center gap-10">
@@ -123,9 +125,9 @@ const SecondSection = () => {
         </div>
         <div>
           <p className="w-full max-w-screen-md text-center">
-            Manila FAME is a member of the Union des Foires Internationales (UFI)
-            and is organized by the Center for International Trade Expositions and
-            Missions (CITEM).
+            Manila FAME is a member of the Union des Foires Internationales
+            (UFI) and is organized by the Center for International Trade
+            Expositions and Missions (CITEM).
           </p>
         </div>
       </div>
@@ -133,7 +135,7 @@ const SecondSection = () => {
   );
 };
 
-const SecondDiv = () => {
+export const SecondDiv = () => {
   return (
     <div className="flex flex-col justify-start items-start gap-6 tracking-wide">
       <h1 className="text-13xl font-bold max-w-md leading-snug">
