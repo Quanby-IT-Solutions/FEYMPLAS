@@ -1,4 +1,4 @@
-// src/components/layouts/header/NavLink.tsx
+// src/components/ui/NavLink.tsx
 
 'use client';
 

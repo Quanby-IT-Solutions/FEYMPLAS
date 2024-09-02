@@ -6,10 +6,11 @@ import { useState } from 'react';
 
 import Image from 'next/image';
 
-import NavLink from './NavLink';
+import Dropdown from './Dropdown';
+import NavLink from '@/components/ui/NavLink';
+
 import AuthButton from './AuthButton';
 import HamburgerMenu from './HamburgerMenu';
-import Dropdown from './Dropdown';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
