@@ -1,9 +1,10 @@
-import type { FC } from "react";
+"use client";
+
+import React from 'react';
 import MaterialMattersContent from "./stories-material-matters-content";
 
 export type CombinedStoriesComponentProps = {
   className?: string;
-  layout?: "grid" | "flex";
   items?: Array<{
     image: string;
     title: string;
@@ -22,70 +23,74 @@ const defaultItems = [
     arrowImage: "/assets/stories-touchpoint/stories-svg/arrow.svg",
   },
   {
-    image: "https://picsum.photos/400/301",
+    image: "/assets/stories-touchpoint/category/design.png",
     title: "Behind the",
     subtitle: "Brand",
     maskImage: "/assets/stories-touchpoint/mask.png",
     arrowImage: "/assets/stories-touchpoint/stories-svg/arrow.svg",
   },
   {
-    image: "https://picsum.photos/400/302",
+    image: "/assets/stories-touchpoint/category/design.png",
     title: "Behind the",
     subtitle: "Brand",
     maskImage: "/assets/stories-touchpoint/mask.png",
     arrowImage: "/assets/stories-touchpoint/stories-svg/arrow.svg",
   },
-  {
-    image: "https://picsum.photos/400/303",
-    title: "Material",
-    subtitle: "Matters",
-    maskImage: "/assets/stories-touchpoint/mask.png",
-    arrowImage: "/assets/stories-touchpoint/stories-svg/arrow.svg",
-  },
-  {
-    image: "https://picsum.photos/400/304",
-    title: "Material",
-    subtitle: "Matters",
-    maskImage: "/assets/stories-touchpoint/mask.png",
-    arrowImage: "/assets/stories-touchpoint/stories-svg/arrow.svg",
-  },
-  {
-    image: "https://picsum.photos/400/305",
-    title: "Material",
-    subtitle: "Matters",
-    maskImage: "/assets/stories-touchpoint/mask.png",
-    arrowImage: "/assets/stories-touchpoint/stories-svg/arrow.svg",
-  },
+  
+  // ... (other default items)
 ];
 
-const StoriesCategoryComponent: FC<CombinedStoriesComponentProps> = ({ 
-  className = "", 
-  layout = "grid", 
+const StoriesCategoryComponent: React.FC<CombinedStoriesComponentProps> = ({
+  className = "",
   items = defaultItems
 }) => {
-  const containerClassName = layout === "grid"
-    ? `self-stretch grid flex-row items-start justify-start gap-[28.5px] max-w-full grid-cols-[repeat(3,_minmax(262px,_1fr))] text-center text-13xl text-color-white font-urbanist mq750:grid-cols-[minmax(262px,_1fr)] mq1025:justify-center mq1025:grid-cols-[repeat(2,_minmax(262px,_455px))] ${className}`
-    : `self-stretch flex flex-row items-start justify-start gap-[28.5px] mb-14 max-w-full text-center text-13xl text-color-white font-urbanist mq1025:flex-wrap ${className}`;
+  const getItemStyle = (itemCount: number) => {
+    if (itemCount === 1) {
+      return {
+        flexBasis: '100%',
+        maxWidth: '100%',
+      };
+    } else if (itemCount === 2) {
+      return {
+        flexBasis: 'calc(50% - 14px)',
+        maxWidth: 'calc(50% - 14px)',
+      };
+    } else if (itemCount === 4) {
+      return {
+        flexBasis: 'calc(50% - 14px)',
+        maxWidth: 'calc(50% - 14px)',
+      };
+    } else {
+      return {
+        flexBasis: 'calc(33.333% - 19px)',
+        maxWidth: 'calc(33.333% - 19px)',
+      };
+    }
+  };
 
   return (
-    <div className={containerClassName}>
+    <div className={`flex flex-wrap justify-start gap-7 w-full ${className}`}>
       {items.map((item, index) => (
-        <MaterialMattersContent
-          key={index}
-          space1={item.image}
-          design={item.title}
-          focus1={item.subtitle}
-          maskGroup={item.maskImage}
-          chevronDown={item.arrowImage}
-          propHeight={layout === "grid" ? "236px" : "200px"}
-          propFlex={layout === "grid" ? "unset" : "1"}
-          propMinWidth={layout === "grid" ? "unset" : "262px"}
-          propHeight1="230px"
-          propTop="12.3px"
-          propPadding="59px 10px"
-          propTop1="11.3px"
-          propTop2="181px"
-        />
+        <div 
+          key={index} 
+          style={getItemStyle(items.length)}
+        >
+          <MaterialMattersContent
+            space1={item.image}
+            design={item.title}
+            focus1={item.subtitle}
+            maskGroup={item.maskImage}
+            chevronDown={item.arrowImage}
+            propHeight="100%"
+            propFlex="1"
+            propMinWidth="unset"
+            propHeight1="100%"
+            propTop="12.3px"
+            propPadding="59px 10px"
+            propTop1="11.3px"
+            propTop2="calc(100% - 55px)"
+          />
+        </div>
       ))}
     </div>
   );

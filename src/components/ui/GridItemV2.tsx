@@ -3,7 +3,6 @@
 import React, { useState, useMemo, CSSProperties } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useRouter } from "next/navigation";
 
@@ -12,16 +11,14 @@ interface GridItemProps {
   subtitle?: string;
   imageSrc: string;
   goto: string;
-  maskGroup?: string;
   className?: string;
 }
 
-const GridItem: React.FC<GridItemProps> = ({ 
+const GridItemV2: React.FC<GridItemProps> = ({ 
   title, 
   subtitle, 
   imageSrc, 
   goto, 
-  maskGroup,
   className = ""
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -155,15 +152,13 @@ const GridItem: React.FC<GridItemProps> = ({
             {subtitle && <p className="m-0">{subtitle}</p>}
           </div>
         </div>
-        {maskGroup && (
-          <img
-            className="absolute left-[239px] w-[90px] h-[43.6px] z-10"
-            loading="lazy"
-            alt=""
-            src={maskGroup}
-            style={{ top: "11.3px" }}
-          />
-        )}
+        <img
+          className="absolute left-[239px] w-[90px] h-[43.6px] z-10"
+          loading="lazy"
+          alt=""
+          src="/assets/stories-touchpoint/mask.png"
+          style={{ top: "11.3px" }}
+        />
       </motion.div>
 
       <motion.div
@@ -199,4 +194,4 @@ const GridItem: React.FC<GridItemProps> = ({
   );
 };
 
-export default GridItem;
+export default GridItemV2;
