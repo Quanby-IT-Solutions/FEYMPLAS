@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import StoriesCategoryComponent from "../stories-section/stories-categories";
+import StoriesCategoryComponent from "../stories-touchpoint-section/stories-categories";
 
 export const AuctionThirdSection = () => {
   // const products = [

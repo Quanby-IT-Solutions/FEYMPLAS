@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
-import ImageSlider from "@/components/ui/stories-section/stories-image-slider";
-import StoriesCategoryComponent from "@/components/ui/stories-section/stories-categories";
-import YourEmail from "@/components/ui/stories-section/stories-your-email";
+import ImageSlider from "@/components/ui/stories-touchpoint-section/stories-image-slider";
+import StoriesCategoryComponent from "@/components/ui/stories-touchpoint-section/stories-categories";
+import YourEmail from "@/components/ui/stories-touchpoint-section/stories-your-email";
 // import Subcribe from "@/components/ui/stories-section/stories-subscribe";
 import Footer from "@/components/layouts/about-us-footer/about-us-footer";
 

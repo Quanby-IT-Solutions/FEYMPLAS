@@ -3,8 +3,8 @@
 
 import { useState, useCallback } from "react";
 import Image from "next/image";
-import EmailNewsletterSubscriptio from "@/components/ui/stories-section/stories-email-newsletter-subscriptio";
-import PortalPopup from "@/components/ui/stories-section/stories-portal-popup";
+import EmailNewsletterSubscriptio from "@/components/ui/stories-touchpoint-section/stories-email-newsletter-subscriptio";
+import PortalPopup from "@/components/ui/stories-touchpoint-section/stories-portal-popup";
 
 export default function Footer() {
   const [isEmailNewsletterSubscriptioOpen, setEmailNewsletterSubscriptioOpen] = useState(false);

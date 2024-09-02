@@ -3,7 +3,7 @@ import React from 'react';
 import StatisticBlock from '@/components/manila-fame/StatisticBlock';
 import RegistrationCard from '@/components/manila-fame/RegistrationCard';
 import ProductImage from '@/components/manila-fame/ProductImage';
-import StoriesCategoryComponent from '../stories-section/stories-categories';
+import StoriesCategoryComponent from '../stories-touchpoint-section/stories-categories';
 
 interface StatisticData {
   value: string;
