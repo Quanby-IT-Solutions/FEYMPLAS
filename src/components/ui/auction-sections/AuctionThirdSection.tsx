@@ -1,41 +1,42 @@
 import { motion } from "framer-motion";
+import StoriesCategoryComponent from "../stories-section/stories-categories";
 
 export const AuctionThirdSection = () => {
-  const products = [
-    {
-      id: 1,
-      image: "/assets/auction/bed.png",
-      title: "Furniture",
-    },
-    {
-      id: 2,
-      image: "/assets/auction/wings.png",
-      title: "Home and House Decor",
-    },
-    {
-      id: 3,
-      image: "/assets/auction/fashion.png",
-      title: "Fashion",
-    },
-    {
-      id: 4,
-      image: "/assets/auction/lamps.png",
-      title: "Lamps and Lighting",
-    },
-    {
-      id: 5,
-      image: "/assets/auction/gift.png",
-      title: "Gifts and Personal Care",
-    },
-    {
-      id: 6,
-      image: "/assets/auction/pumpkin.png",
-      title: "Festive Decorations",
-    },
-  ];
+  // const products = [
+  //   {
+  //     id: 1,
+  //     image: "/assets/auction/bed.png",
+  //     title: "Furniture",
+  //   },
+  //   {
+  //     id: 2,
+  //     image: "/assets/auction/wings.png",
+  //     title: "Home and House Decor",
+  //   },
+  //   {
+  //     id: 3,
+  //     image: "/assets/auction/fashion.png",
+  //     title: "Fashion",
+  //   },
+  //   {
+  //     id: 4,
+  //     image: "/assets/auction/lamps.png",
+  //     title: "Lamps and Lighting",
+  //   },
+  //   {
+  //     id: 5,
+  //     image: "/assets/auction/gift.png",
+  //     title: "Gifts and Personal Care",
+  //   },
+  //   {
+  //     id: 6,
+  //     image: "/assets/auction/pumpkin.png",
+  //     title: "Festive Decorations",
+  //   },
+  // ];
   return (
     <div className="w-full max-w-[80%] flex flex-col">
-      <div className="grid grid-cols-3 gap-8">
+      {/* <div className="grid grid-cols-3 gap-8">
         {products.map((product) => (
           <div className="w-full h-full min-h-32 max-h-72 relative overflow-y-visible flex justify-center items-center">
             <img
@@ -64,7 +65,8 @@ export const AuctionThirdSection = () => {
             </button>
           </div>
         ))}
-      </div>
+      </div> */}
+             <StoriesCategoryComponent />
     </div>
   );
 };
