@@ -3,6 +3,7 @@ import React from 'react';
 import StatisticBlock from '@/components/manila-fame/StatisticBlock';
 import RegistrationCard from '@/components/manila-fame/RegistrationCard';
 import ProductImage from '@/components/manila-fame/ProductImage';
+import StoriesCategoryComponent from '../stories-section/stories-categories';
 
 interface StatisticData {
   value: string;
@@ -28,14 +29,6 @@ const registrationOptions: RegistrationOption[] = [
   { title: 'Register as an Exhibitor', imageSrc: 'https://cdn.builder.io/api/v1/image/assets/TEMP/0c07148925ba3ec0d6e57195a4f7559c36056d63077cc6bdadf1a154f4c8d66c?placeholderIfAbsent=true&apiKey=2a252d86bf2a48fe834ba322701d8e03', altText: 'Exhibitor registration icon' }
 ];
 
-const productImages: string[] = [
-  'https://cdn.builder.io/api/v1/image/assets/TEMP/53ab188776194540300da268275b1f4582b5c2a5211f422191427be9bcf11920?placeholderIfAbsent=true&apiKey=2a252d86bf2a48fe834ba322701d8e03',
-  'https://cdn.builder.io/api/v1/image/assets/TEMP/dc8e39b1ec00e5070228575c0249f9cedb1cc9ac1caf1603b3fcff4c543c5b72?placeholderIfAbsent=true&apiKey=2a252d86bf2a48fe834ba322701d8e03',
-  'https://cdn.builder.io/api/v1/image/assets/TEMP/80a776d9a0a7f5bd0cd000d32b485df72d921fbf7d25722da30edc369ad8a341?placeholderIfAbsent=true&apiKey=2a252d86bf2a48fe834ba322701d8e03',
-  'https://cdn.builder.io/api/v1/image/assets/TEMP/6c75eaacae53ee2ff2540762c2cbd8acd5b3ce5d27c98b89d61c709eeaf87422?placeholderIfAbsent=true&apiKey=2a252d86bf2a48fe834ba322701d8e03',
-  'https://cdn.builder.io/api/v1/image/assets/TEMP/50228cd0173e9b8e9b904fbced5db865926fa63bc105bf2d7ea18a8348e38e70?placeholderIfAbsent=true&apiKey=2a252d86bf2a48fe834ba322701d8e03',
-  'https://cdn.builder.io/api/v1/image/assets/TEMP/8312b7576949b8c3ed4104cda7c729a7bf388ff932344455c35eff43f6fd8343?placeholderIfAbsent=true&apiKey=2a252d86bf2a48fe834ba322701d8e03'
-];
 
 const ManilaFameSecondSection: React.FC = () => {
   return (
@@ -113,16 +106,10 @@ const ManilaFameSecondSection: React.FC = () => {
         The sourcing event showcases Philippine-made artisanal pieces from designers and manufacturers, featuring indigenous materials and age-old processes that mark fine craftsmanship.
       </p>
     </div>
-    <div className="flex flex-wrap justify-center gap-7 items-start mt-16 w-full max-md:max-w-full">
-      {productImages.slice(0, 3).map((src, index) => (
-        <ProductImage key={index} src={src} altText={`Product showcase ${index + 1}`} />
-      ))}
-    </div>
-    <div className="flex flex-wrap justify-center gap-7 items-start mt-5 w-full max-md:max-w-full">
-      {productImages.slice(3).map((src, index) => (
-        <ProductImage key={index + 3} src={src} altText={`Product showcase ${index + 4}`} />
-      ))}
-    </div>
+ 
+
+    <StoriesCategoryComponent className='mt-16'/>
+
     <div className="flex justify-center mt-16 w-[400px] max-md:mt-10 text-xl font-semibold leading-tight text-stone-600">
       <a href="#" className="flex items-center gap-2.5">
         <span>View Full Catalogue</span>
