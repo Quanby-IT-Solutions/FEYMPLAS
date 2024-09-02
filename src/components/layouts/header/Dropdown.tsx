@@ -8,7 +8,7 @@ import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 
 interface DropdownItem {
     label: string;
-    subItems?: DropdownItem[]; // Support sub-dropdown items
+    subItems?: DropdownItem[];
 }
 
 interface DropdownProps {
@@ -81,11 +81,11 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
                 whileTap="tap"
                 className={`tracking-tighter cursor-pointer ${isOpen ? 'text-black font-bold' : 'text-gray-700'
                     } hover:text-black p-2 flex items-center`}
-                onClick={() => setIsOpen(!isOpen)} // Click to toggle main dropdown
+                onClick={() => setIsOpen(!isOpen)}
             >
                 <span className='inline-flex items-center'>
                     <span>
-                        {label} {/* Display the correct label dynamically */}
+                        {label}
                     </span>
                     {/* Down Arrow Icon for Main Dropdown */}
                     <ChevronDownIcon className='w-4 h-4 ml-2 text-gray-700' />
