@@ -120,7 +120,7 @@ const Pagination: FC<{ currentPage: number; totalPages: number }> = ({ currentPa
   const sliderWidth = 25; // Width of the slider in percentage
 
   return (
-    <div className="self-stretch flex flex-row items-start justify-center py-4 px-5 text-left text-lg text-gray-300 font-lato mt-4">
+    <div className="mb-24 self-stretch flex flex-row items-start justify-center py-4 px-5 text-left text-lg text-gray-300 font-lato mt-4">
     <div className="w-40 flex flex-col items-start justify-start gap-[7px]">
       <div className="self-stretch h-1 relative bg-color-gray-3 overflow-hidden"> {/* Added overflow-hidden */}
         <div

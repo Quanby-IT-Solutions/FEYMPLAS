@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-import ImageSlider from "@/components/ui/stories-touchpoint-section/stories-image-slider";
+import { ImageSlider } from "@/components/ui/stories-touchpoint-section/stories-image-slider";
 // import StoriesCategoryComponent from "@/components/ui/stories-touchpoint-section/stories-categories";
 import YourEmail from "@/components/ui/stories-touchpoint-section/stories-your-email";
 // import Subcribe from "@/components/ui/stories-section/stories-subscribe";
@@ -10,36 +10,23 @@ import StoriesCategoryComponentv2 from "@/components/ui/stories-touchpoint-secti
 
 const Root: NextPage = () => {
   return (
-    <section className="w-full h-fit text-primary-2 text-lg font-[300]">
-      <div className="w-full h-full flex flex-col gap-20">
-              {/* Centered Titlepoint Image */}
-      <div className="mt-20 w-full flex justify-center items-center"> {/* Adjust mb to fine-tune position */}
-        <img
+    <div className="w-full flex flex-col justify-center items-center">
+      <section className="w-full py-6 text-timeless-black relative flex justify-center items-center">
+      <img
           className="h-full object-cover"
           alt="Titlepoint"
           src="/assets/stories-touchpoint/titlepoint.png"
         />
-      </div>
-
-      {/* Image Slider Component */}
-      <ImageSlider />
-
-
-      {/* Content Section */}
-      <section className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-[4.7px] box-border max-w-full">
-        <div className="w-[1107px] flex flex-col items-start justify-start gap-[21px] max-w-full">
-          {/* <FrameComponent />
-          <KathaOriginsTitle /> */}
-        {/* <StoriesCategoryComponent /> */}
-        <StoriesCategoryComponentv2 />
+        <div>
         </div>
       </section>
-
-      {/* Email Subscription Components */}
+      <ImageSlider />
+      <section className="w-full flex flex-row gap-4 justify-center items-center py-32">
+      <StoriesCategoryComponentv2 />
+      </section>
       <YourEmail />
-    <Footer />
+      <Footer />
     </div>
-    </section>
   );
 };
 

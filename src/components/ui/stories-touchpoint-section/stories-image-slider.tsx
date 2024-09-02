@@ -1,60 +1,31 @@
-import type { FC } from "react";
-
-export type ImageSliderProps = {
-  className?: string;
-};
-
-const ImageSlider: FC<ImageSliderProps> = ({ className = "" }) => {
+export const ImageSlider = () => {
   return (
-    <section
-      className={`self-stretch mb-20 flex flex-col items-start justify-start pt-60 px-[15%] pb-52 box-border max-w-full text-left bg-black text-white font-urbanist bg-cover bg-no-repeat bg-[top] ${className}`}
-      style={{
-        backgroundImage: "url('/assets/stories-touchpoint/image.png')",
-      }}
-    >
-      {/* "STORIES BEHIND" moved slightly to the right */}
-      <div className="w-full flex items-center justify-start pl-[10%]">
-        <h2
-          className="mb-3 relative font-bold z-[1] text-[3vw] leading-[1.1em] mq450:text-[8vw] mq1025:text-[6vw] text-left whitespace-nowrap"
-          style={{
-            color: "#ffffff",
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.4)",
-          }}
-        >
-          STORIES BEHIND
-        </h2>
+    <div className="w-full h-[calc(100vh-20vh)] relative tracking-wide">
+      {/* Image background */}
+      <div className="w-full h-full absolute inset-0 z-0">
+        <img 
+          src="/assets/stories-touchpoint/image.png" 
+          alt="Background" 
+          className="h-full w-full object-cover"
+        />
       </div>
 
-      {/* "FILIPINO DESIGN EXCELLENCE" moved slightly to the right */}
-      <div className="w-full flex items-center justify-start mt-[-0.5em] pl-[30%]">
-        <h2
-          className="mb-3 relative font-bold z-[1] text-[3vw] leading-[1.1em] mq450:text-[8vw] mq1025:text-[6vw] text-left whitespace-nowrap"
-          style={{
-            color: "#ffffff",
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.4)",
-          }}
-        >
-          FILIPINO DESIGN EXCELLENCE
-        </h2>
-      </div>
-
-      {/* Subtitle with limited width for breaking */}
-      <div className="pl-[30%] flex items-center justify-center box-border max-w-full mt-[-0.5em] text-[1vw] leading-[1.5em] mq450:text-[3vw] mq450:leading-[1.5em]">
-        <div
-          className="max-w-[750px] w-full tracking-[0.1em] font-medium inline-block shrink-0 z-[1]"
-          style={{
-            color: "#ffffff",
-            textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)",
-          }}
-        >
-          {`Cover Feature Story: `}
-          <span className="[text-decoration:underline]">
-            Inviting Natural Home Furnishings are the Heavy Hitters to See from DesignPhilippines in 2023
-          </span>
+      {/* Content overlay */}
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center text-timeless-white bg-black bg-opacity-40">
+        <div className="flex flex-col justify-center items-start leading-none">
+          <h1 className="-ml-[5%] text-21xl md:text-29xl drop-shadow-md font-bold mb-4">
+            STORIES BEHIND
+          </h1>
+          <div className="ml-[28%] w-full">
+            <h1 className="text-21xl md:text-29xl drop-shadow-md font-bold mb-4">
+              FILIPINO DESIGN EXCELLENCE
+            </h1>
+            <p className="text-lg md:text-xl font-[300] max-w-[700px]  text-left">
+              Cover Feature Story: Inviting Natural Home Furnishings are the Heavy Hitters to See from DesignPhilippines in 2023
+            </p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
-
-export default ImageSlider;
