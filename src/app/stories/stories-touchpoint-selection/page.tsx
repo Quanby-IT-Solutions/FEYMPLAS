@@ -1,14 +1,12 @@
 import type { NextPage } from "next";
 
 import ImageSlider from "@/components/ui/stories-touchpoint-section/stories-image-slider";
-// import StoriesCategoryComponent from "@/components/ui/stories-touchpoint-section/stories-categories";
+import StoriesCategoryComponent from "@/components/ui/stories-touchpoint-section/stories-categories";
 import YourEmail from "@/components/ui/stories-touchpoint-section/stories-your-email";
 // import Subcribe from "@/components/ui/stories-section/stories-subscribe";
 import Footer from "@/components/layouts/about-us-footer/about-us-footer";
-import StoriesCategoryComponentv2 from "@/components/ui/stories-touchpoint-section/stories-categoriesv2";
 
-
-const Root: NextPage = () => {
+const StoriesTouchpointSelection: NextPage = () => {
   return (
     <section className="w-full h-fit text-primary-2 text-lg font-[300]">
       <div className="w-full h-full flex flex-col gap-20">
@@ -30,8 +28,7 @@ const Root: NextPage = () => {
         <div className="w-[1107px] flex flex-col items-start justify-start gap-[21px] max-w-full">
           {/* <FrameComponent />
           <KathaOriginsTitle /> */}
-        {/* <StoriesCategoryComponent /> */}
-        <StoriesCategoryComponentv2 />
+        <StoriesCategoryComponent />
         </div>
       </section>
 
@@ -43,4 +40,4 @@ const Root: NextPage = () => {
   );
 };
 
-export default Root;
+export default StoriesTouchpointSelection;

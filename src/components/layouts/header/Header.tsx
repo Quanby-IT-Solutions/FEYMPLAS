@@ -2,15 +2,18 @@
 
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
-import NavLink from './NavLink';
+
+import Image from 'next/image';
+
+import Dropdown from './Dropdown';
+import NavLink from '@/components/ui/NavLink';
+
 import AuthButton from './AuthButton';
 import HamburgerMenu from './HamburgerMenu';
-import Dropdown from './Dropdown';
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false); // State for managing menu visibility
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   // Example items with nested sub-items
   const spotlightItems = [
@@ -31,7 +34,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className='flex items-center justify-between bg-white h-[80px] p-4 lg:p-6 xl:px-[167px] xl:py-[28px] gap-4 md:gap-10 mx-auto opacity-100 top-0 z-50 shadow-md'>
+    <header className='flex items-center justify-between bg-[#F4F4F2] h-[80px] p-4 lg:p-6 xl:px-[167px] xl:py-[28px] gap-4 md:gap-10 mx-auto opacity-100 top-0 z-50 shadow-md'>
       {/* Logo Section */}
       <div className='logo'>
         <Image
@@ -49,9 +52,8 @@ const Header: React.FC = () => {
 
       {/* Navigation Links */}
       <nav
-        className={`fixed md:static left-0 top-0 w-full h-full md:h-auto md:w-auto md:flex items-center justify-center bg-white md:bg-transparent z-40 transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full md:translate-x-0'
-        }`}
+        className={`fixed md:static left-0 top-0 w-full h-full md:h-auto md:w-auto md:flex items-center justify-center bg-white md:bg-transparent z-40 transition-transform duration-300 ease-in-out ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full md:translate-x-0'
+          }`}
       >
         <div className='flex flex-col md:flex-row items-center md:gap-6 xl:gap-8 mt-20 md:mt-0'>
           <NavLink href='/' label='Home' activeLabel={<><i className='pr-[2px]'>O</i>ME</>} />
@@ -67,8 +69,8 @@ const Header: React.FC = () => {
           <NavLink href='/about-us' label='About Us' activeLabel={<><i className='pr-[2px]'>B</i>OUT US</>} />
           {/* Authentication Buttons for Mobile */}
           <div className='flex flex-col items-center gap-4 mt-6 md:hidden px-8 w-full'>
-            <AuthButton href='/login' label='Login' mobile /> {/* Pass mobile prop */}
-            <AuthButton href='/register' label='Register' primary mobile /> {/* Pass mobile prop */}
+            <AuthButton href='/login' label='Login' mobile />
+            <AuthButton href='/register' label='Register' primary mobile />
           </div>
           {/* Close Menu Button for Mobile */}
           <button

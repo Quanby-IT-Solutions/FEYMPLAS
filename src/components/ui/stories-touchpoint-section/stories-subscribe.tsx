@@ -39,7 +39,7 @@ const Subscribe: FC<SubscribeProps> = ({ className = "" }) => {
                 </div>
               </div>
               <b className="self-stretch relative text-21xl text-color-white z-[1] mq450:text-5xl mq1025:text-13xl">
-                Can&apos;t get enough of Fame+?
+                Ca get enough of Fame+?
               </b>
             </div>
             <div className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[11px] box-border max-w-full">
@@ -53,7 +53,7 @@ const Subscribe: FC<SubscribeProps> = ({ className = "" }) => {
               <div className="self-stretch flex flex-row items-start justify-start gap-4 max-w-full mq750:flex-wrap">
                 <div className="flex-1 border-antiquewhite border-[1px] border-solid box-border overflow-hidden flex flex-row items-start justify-start pt-[11px] px-6 pb-2.5 min-w-[84px] max-w-full z-[1]">
                   <input
-                    className="w-[84px] [border:none] [outline:none] font-medium font-urbanist text-lg bg-[transparent] h-7 relative leading-[28px] placeholder:text-antiquewhite text-antiquewhite text-left inline-block p-0"
+                    className="w-[84px] [border:none] [outline:none] font-medium font-urbanist text-lg bg-[transparent] h-7 relative leading-[28px] text-antiquewhite text-left inline-block p-0"
                     placeholder="Your Email"
                     type="text"
                   />
