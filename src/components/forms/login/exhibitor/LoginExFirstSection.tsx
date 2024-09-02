@@ -1,15 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 
+import SectionTopTitle from "@/components/ui/SectionTopTitle";
 import { VerticaExlText } from "../VerticalText";
 
 export default function LoginExFirstSection() {
   return (
-    <div className="w-full  flex flex-col items-center justify-start tracking-wide">
-      <div className=" w-full flex flex-col gap-16 items-center justify-center pt-2 ">
-        <h1 className="text-17xl font-semibold">
-          ACC<span className="italic font-serif font-medium">E</span>SS YOUR{" "}
-          <span className=" font-serif">A</span>CCOUNT
-        </h1>
+    <div className="w-full flex flex-col items-center justify-start tracking-wide">
+      <div className=" w-full flex flex-col gap-16 items-center justify-center pt-2">
+
+        <SectionTopTitle
+          titleSegments={[
+            { content: 'ACC' },
+            { content: 'E', italic: true, serif: true },
+            { content: 'SS YOUR ' },
+            { content: 'A', serif: true },
+            { content: 'CCOUNT' },
+          ]}
+        />
+
         <div className="w-full flex relative mb-4 ">
           {/* left side  */}
           <div className="w-full max-w-[35%]  bg-primary-1 ">
