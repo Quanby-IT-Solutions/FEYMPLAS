@@ -3,7 +3,7 @@ import React from 'react';
 import StatisticBlock from '@/components/manila-fame/StatisticBlock';
 import RegistrationCard from '@/components/manila-fame/RegistrationCard';
 import ProductImage from '@/components/manila-fame/ProductImage';
-import StoriesCategoryComponent from '../stories-touchpoint-section/stories-categories';
+import StoriesCategoryComponentv2 from '../stories-touchpoint-section/stories-categoriesv2';
 
 interface StatisticData {
   value: string;
@@ -97,7 +97,7 @@ const ManilaFameSecondSection: React.FC = () => {
 
   {/* Product Showcase Section */}
   <section className="flex flex-col justify-center items-center mt-32 w-full max-w-[1115px] mx-auto max-md:mt-10 max-md:max-w-full">
-    <div className="flex flex-wrap justify-center gap-10 items-start w-full max-md:max-w-full">
+    <div className="mb-16 flex flex-wrap justify-center gap-10 items-start w-full max-md:max-w-full">
       <h2 className="text-3xl font-bold text-right text-stone-800 max-md:max-w-full">
         EXPL<span className="italic">O</span>RE HUNDREDS OF <span>A</span>RTISANAL <br />
         BRA<span className="italic">N</span>DS AND PR<span className="italic">O</span>DUCTS
@@ -108,7 +108,7 @@ const ManilaFameSecondSection: React.FC = () => {
     </div>
  
 
-    <StoriesCategoryComponent className='mt-16'/>
+    <StoriesCategoryComponentv2/>
 
     <div className="flex justify-center mt-16 w-[400px] max-md:mt-10 text-xl font-semibold leading-tight text-stone-600">
       <a href="#" className="flex items-center gap-2.5">
