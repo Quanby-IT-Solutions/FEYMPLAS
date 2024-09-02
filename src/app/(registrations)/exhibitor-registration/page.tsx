@@ -3,6 +3,7 @@
 import useExhibitorForm from "@/hooks/useExhibitorForm";
 import ThankYouModal from "@/components/ui/ThankYouModal";
 import SavingState from "@/components/ui/SavingState";
+import SectionTopTitle from "@/components/ui/SectionTopTitle";
 
 const ExhibitorRegistrationForm: React.FC = () => {
   const {
@@ -21,12 +22,17 @@ const ExhibitorRegistrationForm: React.FC = () => {
         <ThankYouModal accountType="Exhibitor" onClose={() => setShowModal(false)} />
       ) : (
         <div className="shadow-lg rounded-lg bg-white py-20">
-          <h1 className="text-17xl font-semibold text-center">
-            CR<span className="italic font-serif font-medium">E</span>ATE YOUR EXHIBITOR
-            <div>
-              <span className=" font-serif">A</span>CCOUNT
-            </div>
-          </h1>
+
+          <SectionTopTitle
+            titleSegments={[
+              { content: 'CR' },
+              { content: 'E', italic: true, serif: true },
+              { content: 'ATE YOUR EXHIBITOR ' },
+              { content: 'A', serif: true },
+              { content: 'CCOUNT' },
+            ]}
+          />
+
           {renderStep()}
         </div>
       )}

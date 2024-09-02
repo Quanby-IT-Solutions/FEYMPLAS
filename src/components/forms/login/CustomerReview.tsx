@@ -1,8 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
-import { profile } from "console";
-
-
 export default function CustomerReview() {
 
   const reviewers = [
@@ -29,7 +24,7 @@ export default function CustomerReview() {
   ];
   return (
     <div className="w-full h-full pt-12 flex justify-center items-center">
-      <div className="w-full max-w-[80%] flex flex-col gap-8">
+      <div className="w-full max-w-[80%] flex flex-col gap-8 text-gray-900">
         <div className="w-full flex flex-col gap-2 justify-start items-start">
           <div className="w-full flex flex-row gap-2 justify-start items-center">
             <p>Reviews</p>
