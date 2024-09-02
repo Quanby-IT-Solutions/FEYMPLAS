@@ -39,7 +39,7 @@ const Subscribe: FC<SubscribeProps> = ({ className = "" }) => {
                 </div>
               </div>
               <b className="self-stretch relative text-21xl text-color-white z-[1] mq450:text-5xl mq1025:text-13xl">
-                Can't get enough of Fame+?
+                Ca get enough of Fame+?
               </b>
             </div>
             <div className="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[11px] box-border max-w-full">
