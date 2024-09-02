@@ -12,6 +12,8 @@ interface GridItemProps {
   imageSrc: string;
   goto: string;
   className?: string;
+  titleSize?: string;
+  subtitleSize?: string;
 }
 
 const GridItemV2: React.FC<GridItemProps> = ({ 
@@ -19,7 +21,9 @@ const GridItemV2: React.FC<GridItemProps> = ({
   subtitle, 
   imageSrc, 
   goto, 
-  className = ""
+  className = "",
+  titleSize = "text-2xl",
+  subtitleSize = "text-lg"
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
@@ -61,7 +65,7 @@ const GridItemV2: React.FC<GridItemProps> = ({
   };
 
   const overlayVariants = {
-    initial: { opacity: 0.2 },
+    initial: { opacity: 0.1 },
     hover: {
       opacity: 0.5,
       transition: { duration: 0.3, ease: "easeInOut" },
@@ -147,12 +151,11 @@ const GridItemV2: React.FC<GridItemProps> = ({
           )}
         </AnimatePresence>
         <div
-          className="absolute inset-0 flex items-center justify-center"
-          style={{ top: "12.3px", padding: "59px 10px" }}
+          className="absolute inset-0 flex flex-col items-center justify-center"
         >
-          <div className="relative font-semibold z-20 text-white text-center">
-            <p className="m-0">{title}</p>
-            {subtitle && <p className="m-0">{subtitle}</p>}
+          <div className="relative font-medium z-20 text-white text-center leading-none">
+            <h2 className={`${titleSize} mb-0`}>{title}</h2>
+            {subtitle && <p className={`${subtitleSize} mt-1`}>{subtitle}</p>}
           </div>
         </div>
         <img

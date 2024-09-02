@@ -5,39 +5,41 @@ import GridItemV2 from '../GridItemV2';
 
 const gridItems = [
   {
-    title: "Invited Guests",
-    subtitle: "(with invite code)",
-    imageSrc: "/assets/auction/candles.png",
+    title: "Design",
+    subtitle: "Focus",
+    imageSrc: "/assets/stories-touchpoint/category/design.png",
     goto: "/invited-guests",
   },
   {
-    title: "Invited Guests",
-    subtitle: "(with invite code)",
-    imageSrc: "/assets/auction/candles.png",
+    title: "Behind The",
+    subtitle: "Brand",
+    imageSrc: "/assets/stories-touchpoint/category/behind-the-brand.png",
+    goto: "/invited-guests",
+},
+{
+    title: "Artisan",
+    subtitle: "Corner",
+    imageSrc: "/assets/stories-touchpoint/category/artisan-corner.png",
     goto: "/invited-guests",
   },
-    {
-    title: "Invited Guests",
-    subtitle: "(with invite code)",
-    imageSrc: "/assets/auction/candles.png",
-    goto: "/invited-guests",
-  },
-
   {
-    title: "Invited Guests",
-    subtitle: "(with invite code)",
-    imageSrc: "/assets/auction/candles.png",
+    title: "Material",
+    subtitle: "Matters",
+    imageSrc: "/assets/stories-touchpoint/category/material-matters.png",
     goto: "/invited-guests",
   },
-
   {
-    title: "Invited Guests",
-    subtitle: "(with invite code)",
-    imageSrc: "/assets/auction/candles.png",
+    title: "Creative",
+    subtitle: "Dialogues",
+    imageSrc: "/assets/stories-touchpoint/category/creative-dialogues.png",
     goto: "/invited-guests",
   },
-
-
+  {
+    title: "Industry",
+    subtitle: "News",
+    imageSrc: "/assets/stories-touchpoint/category/Industry.png",
+    goto: "/invited-guests",
+  },
 ];
 
 export default function StoriesCategoryComponentv2() {
@@ -78,6 +80,8 @@ export default function StoriesCategoryComponentv2() {
                 subtitle={item.subtitle}
                 imageSrc={item.imageSrc}
                 goto={item.goto}
+                titleSize="text-[2rem]"
+                subtitleSize="text-[2rem]"
               />
             </div>
           ))}
