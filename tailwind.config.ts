@@ -56,6 +56,7 @@ const config: Config = {
       'vertical-rl': 'vertical-rl',
     },
     fontSize: {
+      'xs': "12px",
       'sm': "14px",
       'smi': "13px",
       'lg': "18px",
@@ -64,7 +65,6 @@ const config: Config = {
       "21xl": "40px",
       "5xl": "24px",
       "13xl": "32px",
-      'xs': "12px",
       'lgi': "19px",
       "7xl": "26px",
       "41xl": "60px",

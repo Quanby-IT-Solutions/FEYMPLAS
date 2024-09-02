@@ -1,5 +1,5 @@
 import Reviews from "@/components/Reviews";
-import Services2 from "@/components/Services2";
+import Services from "@/components/Services";
 import { AuctionFirstSection } from "@/components/ui/auction-sections/AuctionFirstSection";
 import { AuctionFourthSection } from "@/components/ui/auction-sections/AuctionFourthSection";
 import { AuctionSecondSection } from "@/components/ui/auction-sections/AuctionSecondSection";
@@ -67,8 +67,17 @@ export default function Auction() {
       <section className="w-full h-[calc(100vh-10vh)] flex justify-center items-center py-16 pb-24">
         <AuctionFourthSection />
       </section>
-      <section className="w-full py-16">
-        <Services2 />
+      <section className="w-full py-16 bg-secondary-1">
+        <Services
+          textColor="text-timeless-white"
+          hrColor="border-timeless-white"
+          // bgColor="bg-timeless-white"
+          inputBorderColor="border-timeless-white"
+          placeHolderColor="text-timeless-white"
+          outlineColor="outline-secondary-1"
+          buttonBgColor="bg-timeless-white"
+          buttonTextColor="text-secondary-1"
+        />
       </section>
       <section className="w-full">
         <Reviews />

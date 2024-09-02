@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
 
 export const AuctionThirdSection = () => {
@@ -37,7 +38,7 @@ export const AuctionThirdSection = () => {
     <div className="w-full max-w-[80%] flex flex-col">
       <div className="grid grid-cols-3 gap-8">
         {products.map((product) => (
-          <div className="w-full h-full min-h-32 max-h-72 relative overflow-y-visible flex justify-center items-center">
+          <div key={product.id} className="w-full h-full min-h-32 max-h-72 relative overflow-y-visible flex justify-center items-center">
             <img
               className="w-full h-full object-cover"
               src={product.image}
