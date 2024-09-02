@@ -1,15 +1,16 @@
 import type { NextPage } from "next";
 import ImageSlider from "@/components/ui/stories-section/stories-image-slider";
-import FrameComponent from "@/components/ui/stories-section/stories-frame-component";
-import KathaOriginsTitle from "@/components/ui/stories-section/stories-katha-origins-title";
+import StoriesCategoryComponent from "@/components/ui/stories-section/stories-categories";
 import YourEmail from "@/components/ui/stories-section/stories-your-email";
-import Subcribe from "@/components/ui/stories-section/stories-subscribe";
+// import Subcribe from "@/components/ui/stories-section/stories-subscribe";
+import Footer from "@/components/layouts/about-us-footer/about-us-footer";
 
 const Root: NextPage = () => {
   return (
-    <div className="w-full relative flex flex-col items-start justify-start pt-10 box-border gap-16 leading-[normal] tracking-[normal] text-center text-[74px] text-gray-200 font-urbanist">
-      {/* Centered Titlepoint Image */}
-      <div className="w-full flex justify-center items-center"> {/* Adjust mb to fine-tune position */}
+    <section className="w-full h-fit text-primary-2 text-lg font-[300]">
+      <div className="w-full h-full flex flex-col gap-20">
+              {/* Centered Titlepoint Image */}
+      <div className="mt-20 w-full flex justify-center items-center"> {/* Adjust mb to fine-tune position */}
         <img
           className="h-full object-cover"
           alt="Titlepoint"
@@ -24,15 +25,17 @@ const Root: NextPage = () => {
       {/* Content Section */}
       <section className="self-stretch flex flex-row items-start justify-center pt-0 px-5 pb-[4.7px] box-border max-w-full">
         <div className="w-[1107px] flex flex-col items-start justify-start gap-[21px] max-w-full">
-          <FrameComponent />
-          <KathaOriginsTitle />
+          {/* <FrameComponent />
+          <KathaOriginsTitle /> */}
+        <StoriesCategoryComponent />
         </div>
       </section>
 
       {/* Email Subscription Components */}
       <YourEmail />
-      <Subcribe />
+    <Footer />
     </div>
+    </section>
   );
 };
 
