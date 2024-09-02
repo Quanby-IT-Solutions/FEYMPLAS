@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export const ManilaFameFirstSection = () => {
     return (
       <div className="w-full h-[calc(100vh-20vh)] relative border border-black tracking-wide">
@@ -23,6 +24,8 @@ export const ManilaFameFirstSection = () => {
             <h1 className="-ml-[5%] text-21xl md:text-29xl drop-shadow-md font-bold mb-4">
             LIFESTYLE PRODUCTS
            </h1>
+
+           
            <p className="-ml-[5%] text-lg md:text-xl font-[300] max-w-2xl text-left">
               17 - 20 OCTOBER 2024 | 72ND EDITION
             </p>
@@ -34,7 +37,11 @@ export const ManilaFameFirstSection = () => {
 
           </div>
         </div>
+
+       
+
       </div>
+      
     );
   };
   
