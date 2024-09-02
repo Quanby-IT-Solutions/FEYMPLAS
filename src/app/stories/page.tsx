@@ -13,11 +13,14 @@ const Root: NextPage = () => {
     <div className="w-full flex flex-col justify-center items-center">
       <section className="w-full py-6 text-timeless-black relative flex justify-center items-center">
       <img
-          className="h-full object-cover"
+          className="w-[500px] object-cover"
           alt="Titlepoint"
-          src="/assets/stories-touchpoint/titlepoint.png"
+          src="/assets/stories-touchpoint/pointtitle.png"
         />
-        <div>
+          <div>
+          <button className="p-4 w-32 bg-secondary-1 text-timeless-white font-medium fixed right-0 z-20">
+            FaQ&apos;s
+          </button>
         </div>
       </section>
       <ImageSlider />
