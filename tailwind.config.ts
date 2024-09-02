@@ -75,7 +75,9 @@ const config: Config = {
       'inherit': "inherit",
     },
       boxShadow: {
-        'custom-shadow': '0px 4px 16px 0px #2B271E4D', // Custom shadow
+        'custom-shadow': '0px 4px 16px 0px #2B271E4D', 
+        'custom-shadow-2xl': '0px 4px 20px 0px rgba(106, 112, 76, 0.7)',
+
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
