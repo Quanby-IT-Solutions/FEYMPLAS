@@ -12,7 +12,7 @@ export default function Lots() {
       <div className="w-full flex justify-center items-center">
         <LotsSecondsSection />
       </div>
-      <div className="w-full flex justify-center items-center py-20 relative">
+      <div className="w-full flex justify-center items-center py-20">
         <LotsThirdSection />
       </div>
     </section>

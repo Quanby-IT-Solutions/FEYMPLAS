@@ -60,12 +60,12 @@ export const DynamicSection = ({ auctions }: { auctions: Auction[] }) => {
   }, []);
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full">
       <div
         className="w-full overflow-x-auto scroll-none h-[100dvh]"
         ref={containerRef}
       >
-        <div className="flex space-x-8 pb-4 items-end h-full px-5">
+        <div className="flex space-x-8 py-4 items-end h-full px-5 shadow-custom-sd">
           {displayedAuctions.map((auction) => (
             <div
               key={auction.id}
