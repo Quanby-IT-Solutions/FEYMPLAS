@@ -15,7 +15,7 @@ export default function Auction() {
         </h1>
         <div>
           <button className="p-4 w-32 bg-secondary-1 text-timeless-white font-medium fixed right-0 z-20">
-            FaQ&apos;s
+            FAQ&apos;s
           </button>
         </div>
       </section>

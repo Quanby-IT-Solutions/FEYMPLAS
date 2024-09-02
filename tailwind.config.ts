@@ -76,6 +76,7 @@ const config: Config = {
     },
       boxShadow: {
         'custom-shadow': '0px 4px 16px 0px #2B271E4D', 
+        'custom-sd': '5px 2px 15px 5px #2B271E4D', 
         'custom-shadow-2xl': '0px 4px 20px 0px rgba(106, 112, 76, 0.7)',
 
       },
