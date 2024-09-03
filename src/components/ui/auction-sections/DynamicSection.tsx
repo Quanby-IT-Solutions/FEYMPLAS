@@ -65,15 +65,15 @@ export const DynamicSection = ({ auctions }: { auctions: Auction[] }) => {
         className="w-full overflow-x-auto scroll-none h-[100dvh]"
         ref={containerRef}
       >
-        <div className="flex space-x-8 py-4 items-end h-full px-5 shadow-custom-sd">
+        <div className="flex space-x-8 py-4 items-end h-full px-5">
           {displayedAuctions.map((auction) => (
             <div
               key={auction.id}
-              className="flex-shrink-0 flex flex-col items-center pt-12"
+              className="flex-shrink-0 flex flex-col items-center pt-12 "
               style={{ width: `${auction.width}px` }}
             >
               <motion.div
-                className="w-full mb-2 overflow-visible"
+                className="w-full mb-2 overflow-visible "
                 initial={{ height: auction.height, boxShadow: "none" }}
                 animate={
                   hovered === auction.id
@@ -88,7 +88,7 @@ export const DynamicSection = ({ auctions }: { auctions: Auction[] }) => {
                 onMouseLeave={handleMouseLeave}
               >
                 <motion.img
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover "
                   src={auction.image}
                   alt={auction.title}
                   style={{ height: "100%", paddingTop: 50 }}
