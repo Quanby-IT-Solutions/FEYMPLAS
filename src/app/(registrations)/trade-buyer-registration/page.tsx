@@ -18,7 +18,16 @@ const TradeBuyerRegistrationForm: React.FC = () => {
       {isSaving ? (
         <SavingState accountType="Trade Buyer" onSuccess={handleSuccess} />
       ) : showModal ? (
-        <ThankYouModal accountType="Trade Buyer" onClose={() => setShowModal(false)} />
+        <ThankYouModal
+          accountType="Trade Buyer"
+          onClose={() => setShowModal(false)}
+          title="THANK YOU!"
+          successMessage="You have successfully applied for a Trade Buyer account!"
+          additionalMessage="Your submission has been received and is under review. You will be notified
+                    via email once your account is approved."
+          redirectPath="/dashboard"
+          duration={8000}
+        />
       ) : (
         <div className="shadow-lg rounded-lg bg-white py-20">
           <h1 className="text-17xl font-semibold text-center">

@@ -1,4 +1,4 @@
-import Footer from "@/components/layouts/about-us-footer/about-us-footer";
+import Footer from "@/components/ui/subscription/SubscriptionServiceComponent";
 import Services from "@/components/Services";
 
 /* eslint-disable @next/next/no-img-element */

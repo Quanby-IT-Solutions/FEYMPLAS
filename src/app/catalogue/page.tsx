@@ -6,6 +6,7 @@ import Image from 'next/image';
 import InspirationCard from './InspirationCard';
 import CategoryButton from './CategoryButton';
 import ProductCard from './ProductCard';
+import SubscriptionServiceComponent from '@/components/ui/subscription/SubscriptionServiceComponent';
 
 export default function Catalogue() {
   const [activeButton, setActiveButton] = useState<string>('Home Decor & Houseware');
@@ -168,22 +169,7 @@ export default function Catalogue() {
           </div>
         </section>
 
-        <section className="w-full py-16 bg-gray-800 text-white text-center">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-4">Can’t get enough of Fame+?</h2>
-            <p className="mb-6">
-              Our free email newsletter is bursting at the seams with the latest in high-quality design-oriented home, fashion, holiday, and interior products.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="px-4 py-2 rounded-md w-1/3 text-gray-700"
-              />
-              <button className="bg-secondary-1 px-4 py-2 rounded-md text-timeless-white">SUBMIT</button>
-            </div>
-          </div>
-        </section>
+        <SubscriptionServiceComponent />
 
         <Carousel slides={reviewers} />
       </main>

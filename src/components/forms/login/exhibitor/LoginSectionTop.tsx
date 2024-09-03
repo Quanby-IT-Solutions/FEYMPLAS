@@ -1,12 +1,22 @@
-/* eslint-disable @next/next/no-img-element */
+'use client';
+
+import Image from 'next/image';
 
 import SectionTopTitle from "@/components/ui/SectionTopTitle";
+
+import { useRouter } from 'next/navigation';
 import { VerticaExlText } from "../VerticalText";
 
-export default function LoginExFirstSection() {
+export default function LoginSectionTop() {
+  const router = useRouter();
+
+  const handleDashboardNavigation = () => {
+    router.push('/dashboard');
+  };
+
   return (
     <div className="w-full flex flex-col items-center justify-start tracking-wide">
-      <div className=" w-full flex flex-col gap-16 items-center justify-center pt-2">
+      <div className="w-full flex flex-col gap-16 items-center justify-center pt-2">
 
         <SectionTopTitle
           titleSegments={[
@@ -18,10 +28,10 @@ export default function LoginExFirstSection() {
           ]}
         />
 
-        <div className="w-full flex relative mb-4 ">
-          {/* left side  */}
-          <div className="w-full max-w-[35%]  bg-primary-1 ">
-            <div className="flex flex-col items-center justify-center w-full ">
+        <div className="w-full flex relative mb-4">
+          {/* left side */}
+          <div className="w-full max-w-[35%] bg-primary-1">
+            <div className="flex flex-col items-center justify-center w-full">
               <div className="writing-vertical-rl -ml-[25%] py-4 text-primary-2 font-bold">
                 <VerticaExlText text="TRADE BUYERS" />
               </div>
@@ -30,7 +40,7 @@ export default function LoginExFirstSection() {
           {/* right side */}
 
           <div className="w-full bg-secondary-5 flex justify-end items-center text-timeless-white">
-            <div className=" w-fit mr-[15%] p-6 flex flex-col gap-4 justify-center items-end">
+            <div className="w-fit mr-[15%] p-6 flex flex-col gap-4 justify-center items-end">
               <div className="w-full flex flex-row gap-2 justify-end items-center">
                 <hr className="w-16 border border-timeless-white" />
                 <p>Exhibit With Fame+</p>
@@ -43,7 +53,10 @@ export default function LoginExFirstSection() {
                 collections to a worldwide audience, 365 days a year.
               </p>
               <div className="w-full flex flex-col gap-2 justify-center items-end pt-4">
-                <button className="p-4 bg-timeless-white text-secondary-5 w-full max-w-96">
+                <button
+                  className="p-4 bg-timeless-white text-secondary-5 w-full max-w-96"
+                  onClick={handleDashboardNavigation}
+                >
                   Take Me To My Dashboard
                 </button>
                 <p className="text-sm text-right">
@@ -56,10 +69,14 @@ export default function LoginExFirstSection() {
               </div>
             </div>
           </div>
-          <img
+
+          <Image
             className="absolute top-1/2 left-[35%] -translate-x-1/2 -translate-y-1/2 min-h-fit max-h-[125%] object-cover z-10"
-            src="assets/login/tinanom.png"
-            alt=""
+            src="/assets/login/tinanom.png"
+            alt="Tinanom"
+            width={450}
+            height={600}
+            priority
           />
         </div>
       </div>
