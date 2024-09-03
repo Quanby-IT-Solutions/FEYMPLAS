@@ -27,7 +27,13 @@ const gridItems = [
   },
 ];
 
-export default function Register() {
+type RegisterProps = {
+  columns?: number;
+};
+
+export default function Register({ columns = 2 }: RegisterProps) {
+  const gridClass = `grid grid-cols-1 md:grid-cols-${columns} gap-6`;
+
   return (
     <div className="flex flex-col items-center text-gray-900 bg-white">
       <div className="shadow-lg rounded-lg p-10">
@@ -35,8 +41,7 @@ export default function Register() {
           VISIT<span className="italic font-serif font-medium">O</span>R REGISTR
           <span className="font-serif">A</span>TION
         </h1>
-        {/* Grid Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className={gridClass}>
           {gridItems.map((item, index) => (
             <GridItem
               key={index}

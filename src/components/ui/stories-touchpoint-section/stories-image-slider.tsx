@@ -1,26 +1,28 @@
+import Image from "next/image";
+
 export const ImageSlider = () => {
   return (
-    <div className="w-full h-[calc(100vh-20vh)] relative tracking-wide">
-      {/* Image background */}
-      <div className="w-full h-full absolute inset-0 z-0">
-        <img 
-          src="/assets/stories-touchpoint/image.png" 
-          alt="Background" 
-          className="h-full w-full object-cover"
+    <div className="relative w-full h-[calc(100vh-20vh)]">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/assets/stories-touchpoint/image.png"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          priority
         />
       </div>
 
-      {/* Content overlay */}
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center text-timeless-white bg-black bg-opacity-40">
-        <div className="flex flex-col justify-center items-start leading-none">
-          <h1 className="-ml-[5%] text-21xl md:text-29xl drop-shadow-md font-bold mb-4">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-timeless-white bg-black bg-opacity-40 px-4 md:px-0">
+        <div className="flex flex-col items-start justify-center leading-none space-y-4">
+          <h1 className="text-21xl md:text-6xl drop-shadow-md font-bold -ml-[5%]">
             STORIES BEHIND
           </h1>
-          <div className="ml-[28%] w-full">
-            <h1 className="text-21xl md:text-29xl drop-shadow-md font-bold mb-4">
+          <div className="w-full md:ml-[28%] text-left">
+            <h1 className="text-21xl md:text-6xl drop-shadow-md font-bold">
               FILIPINO DESIGN EXCELLENCE
             </h1>
-            <p className="text-lg md:text-xl font-[300] max-w-[700px]  text-left">
+            <p className="text-base md:text-lg font-light max-w-[700px] mt-4">
               Cover Feature Story: Inviting Natural Home Furnishings are the Heavy Hitters to See from DesignPhilippines in 2023
             </p>
           </div>
