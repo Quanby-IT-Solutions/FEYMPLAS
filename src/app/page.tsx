@@ -3,7 +3,7 @@ import FeatureSection from '@/components/ui/plus-feature/FeatureSection';
 
 export default function Home() {
   return (
-    <div className='flex-grow'>
+    <div className='flex-grow w-full'>
       <HeroSection />
       <FeatureSection />
     </div>

@@ -11,7 +11,7 @@ export const PlaceBidModal = () => {
           <div className="flex flex-col w-full gap-4">
             <div className="w-full relative">
               <input
-                type="text"
+                type="number"
                 className="w-96 bg-secondary-5 bg-opacity-20 focus:outline-secondary-5 p-5 pt-8"
               />
               <label

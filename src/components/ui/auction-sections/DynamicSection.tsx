@@ -23,7 +23,6 @@ export const DynamicSection = ({ auctions }: { auctions: Auction[] }) => {
   const [hovered, setHovered] = useState<number | null>(null);
   const [hoverTimer, setHoverTimer] = useState<NodeJS.Timeout | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [loading, setLoading] = useState(false);
 
   const handleMouseEnter = (id: number) => {
     const timer = setTimeout(() => {
@@ -37,27 +36,14 @@ export const DynamicSection = ({ auctions }: { auctions: Auction[] }) => {
     setHovered(null); // Remove hover effect immediately when the cursor leaves
   };
 
-  // Load more auctions when scrolling
-  const handleScroll = () => {
-    const { scrollTop, scrollHeight, clientHeight } = containerRef.current!;
-    if (scrollTop + clientHeight >= scrollHeight - 5 && !loading) {
-      loadMoreAuctions();
-    }
-  };
-
-  const loadMoreAuctions = () => {
-    const newAuctions = auctions; // In a real scenario, fetch more data here
-    setDisplayedAuctions((prev) => [...prev, ...newAuctions]);
-  };
-
   useEffect(() => {
-    const currentContainer = containerRef.current;
-    currentContainer!.addEventListener("scroll", handleScroll);
-
     return () => {
-      currentContainer!.removeEventListener("scroll", handleScroll);
+      // Cleanup hover timer
+      if (hoverTimer) {
+        clearTimeout(hoverTimer);
+      }
     };
-  }, []);
+  }, [hoverTimer]);
 
   return (
     <div className="w-full">
@@ -65,15 +51,15 @@ export const DynamicSection = ({ auctions }: { auctions: Auction[] }) => {
         className="w-full overflow-x-auto scroll-none h-[100dvh]"
         ref={containerRef}
       >
-        <div className="flex space-x-8 py-4 items-end h-full px-5">
+        <div className="flex space-x-8 py-4 items-end h-full px-6">
           {displayedAuctions.map((auction) => (
             <div
               key={auction.id}
-              className="flex-shrink-0 flex flex-col items-center pt-12 "
+              className="flex-shrink-0 flex flex-col items-center pt-12"
               style={{ width: `${auction.width}px` }}
             >
               <motion.div
-                className="w-full mb-2 overflow-visible "
+                className="w-full mb-2 overflow-visible"
                 initial={{ height: auction.height, boxShadow: "none" }}
                 animate={
                   hovered === auction.id
@@ -88,7 +74,7 @@ export const DynamicSection = ({ auctions }: { auctions: Auction[] }) => {
                 onMouseLeave={handleMouseLeave}
               >
                 <motion.img
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover"
                   src={auction.image}
                   alt={auction.title}
                   style={{ height: "100%", paddingTop: 50 }}
@@ -110,9 +96,6 @@ export const DynamicSection = ({ auctions }: { auctions: Auction[] }) => {
             </div>
           ))}
         </div>
-        {loading && (
-          <p className="text-center py-4">Loading more auctions...</p>
-        )}
       </div>
     </div>
   );

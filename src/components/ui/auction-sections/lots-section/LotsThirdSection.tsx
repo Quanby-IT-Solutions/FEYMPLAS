@@ -19,7 +19,7 @@ export const LotsThirdSection = () => {
 
   return (
     <div className="w-full relative">
-      <div className="w-fit absolute top-[10%] left-1/2 -translate-x-1/2 z-20 text-primary-2 flex flex-col items-center">
+      <div className="w-fit absolute left-1/2 -translate-x-1/2 z-20 text-primary-2 flex flex-col items-center">
         <h1 className="text-17xl uppercase font-bold">7 LOTS</h1>
         <div className="flex justify-between items-center w-full">
           <div className="flex flex-row items-center justify-center gap-4">

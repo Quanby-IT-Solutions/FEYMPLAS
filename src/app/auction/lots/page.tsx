@@ -5,14 +5,14 @@ import { LotsThirdSection } from "@/components/ui/auction-sections/lots-section/
 /* eslint-disable @next/next/no-img-element */
 export default function Lots() {
   return (
-    <section className="w-full">
+    <section className="w-full flex flex-col gap-20 pb-20">
       <div className="w-full">
         <LotsFirstSection />
       </div>
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full">
         <LotsSecondsSection />
       </div>
-      <div className="w-full flex justify-center items-center py-20">
+      <div className="w-full">
         <LotsThirdSection />
       </div>
     </section>
