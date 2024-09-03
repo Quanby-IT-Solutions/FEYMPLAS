@@ -1,5 +1,5 @@
 import LoginExFirstSection from "./exhibitor/LoginExFirstSection";
-import Carousel from "./CustomerReview";
+import Carousel from "./Carousel";
 
 const LoginForm = () => {
 
