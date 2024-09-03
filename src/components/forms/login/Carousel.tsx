@@ -10,6 +10,7 @@ import { ArrowLongLeftIcon, ArrowLongRightIcon } from "@heroicons/react/24/outli
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Title from "@/components/ui/Title";
 
 interface Slide {
   name: string;
@@ -23,7 +24,7 @@ interface CarouselProps {
 }
 
 const Carousel: React.FC<CarouselProps> = ({ slides }) => {
-  const swiperRef = React.useRef<any>(null); 
+  const swiperRef = React.useRef<any>(null);
 
   // Functions to handle manual Swiper navigation
   const handlePrevious = () => {
@@ -36,12 +37,15 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-12 relative">
-      {/* Header Section */}
-      <div className="flex justify-between items-center mb-8">
-        <div>
-          <p className="text-sm font-medium text-gray-600 uppercase tracking-wider mb-2">Reviews</p>
-          <h2 className="text-3xl font-bold text-gray-900">What our customers are saying</h2>
-        </div>
+      <div className="flex justify-between items-center mb-8 text-gray-900">
+
+        {/* Header Section */}
+        <Title
+          headerText="Reviews"
+          subheaderText="What our customers are saying"
+          subheaderSize="text-21xl"
+        />
+
         {/* Header Navigation Buttons */}
         <div className="flex gap-4">
           {slides.length > 1 && (

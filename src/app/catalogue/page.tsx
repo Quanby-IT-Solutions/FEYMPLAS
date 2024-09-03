@@ -1,5 +1,6 @@
 "use client";
 
+import Carousel from '@/components/forms/login/Carousel';
 import React, { useState } from 'react';
 
 export default function Catalogue() {
@@ -10,6 +11,50 @@ export default function Catalogue() {
   const handleButtonClick = (category: string) => {
     setActiveButton(category);
   };
+
+  const reviewers = [
+    {
+      name: "Pedro Ibanez",
+      specialization: "UI Designer at Google",
+      profile: "/assets/login/pandok1.png",
+      comment:
+        "Our team has been working at frispes for almost 2 months because our office still closed. During working at frispes, we feel a new experience, we can feel working with a beautiful, modern, and comfortable space. And cozy cafe with high-speed internet in there. Thank you for frispes and team.",
+    },
+    {
+      name: "Raymond Thual",
+      specialization: "Professional Freelancer",
+      profile: "/assets/login/pandok2.png",
+      comment:
+        "The high-speed internet at frispes was so amazing. I can get the best experience when running a video call with my clients. Frispes has a spacious and safe parking area, that’s what I need because I used to work as a freelancer for a long time.",
+    },
+    {
+      name: "Yuli Berlian",
+      specialization: "iOS Dev at Tokopedia",
+      profile: "/assets/login/pandok3.png",
+      comment: "Just three words: Frispes is Awesome!",
+    },
+    {
+      name: "Maria Gonzalez",
+      specialization: "Backend Developer at Amazon",
+      profile: "/assets/login/pandok1.png",
+      comment:
+        "The environment at frispes allows for a productive workflow with all the facilities needed to focus and work. Highly recommended for teams who want to work outside the office.",
+    },
+    {
+      name: "Liam Smith",
+      specialization: "Product Manager at Microsoft",
+      profile: "/assets/login/pandok2.png",
+      comment:
+        "Frispes has become my go-to place for brainstorming sessions and deep work. The ambience is inspiring, and the amenities are top-notch.",
+    },
+    {
+      name: "Sophia Lee",
+      specialization: "Marketing Specialist at Facebook",
+      profile: "/assets/login/pandok3.png",
+      comment:
+        "Frispes is a unique co-working space with an excellent blend of comfort and functionality. I always enjoy working here.",
+    },
+  ];
 
   return (
     <div className="w-full flex flex-col justify-center items-center tracking-wide text-lg">
@@ -177,36 +222,7 @@ export default function Catalogue() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="w-full py-10 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-6 text-primary-2">
-              What Our Customers Are Saying
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Repeat for all testimonials */}
-              {[
-                {
-                  name: 'Pedro Ibanez',
-                  comment: 'Our team has been wearing ...',
-                  image: 'testimonial1-url-here',
-                },
-                {
-                  name: 'Raymond Thuul',
-                  comment: 'The high-end internet ...',
-                  image: 'testimonial2-url-here',
-                },
-              ].map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-800 text-white p-6 rounded-md shadow-md"
-                >
-                  <p className="text-sm">{testimonial.comment}</p>
-                  <h4 className="font-bold mt-4">{testimonial.name}</h4>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Carousel slides={reviewers} />
       </main>
     </div>
   );

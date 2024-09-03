@@ -1,6 +1,6 @@
 import SectionTop from "../ui/SectionTop";
 import SectionTopTitle from "../ui/SectionTopTitle";
-import Carousel from "../forms/login/CustomerReview";
+import Carousel from "../forms/login/Carousel";
 
 export default function RegisterSection() {
     const reviewers = [
