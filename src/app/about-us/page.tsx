@@ -1,4 +1,4 @@
-import Footer from "@/components/layouts/about-us-footer/about-us-footer";
+import Footer from "@/components/ui/subscription/SubscriptionServiceComponent";
 
 /* eslint-disable @next/next/no-img-element */
 export default function AboutUs() {

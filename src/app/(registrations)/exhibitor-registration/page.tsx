@@ -19,7 +19,16 @@ const ExhibitorRegistrationForm: React.FC = () => {
       {isSaving ? (
         <SavingState accountType="Exhibitor" onSuccess={handleSuccess} />
       ) : showModal ? (
-        <ThankYouModal accountType="Exhibitor" onClose={() => setShowModal(false)} />
+        <ThankYouModal
+          accountType="Exhibitor"
+          onClose={() => setShowModal(false)}
+          title="THANK YOU!"
+          successMessage="You have successfully applied for a Exhibitor account!"
+          additionalMessage="Your submission has been received and is under review. You will be notified
+                    via email once your account is approved."
+          redirectPath="/dashboard"
+          duration={8000}
+        />
       ) : (
         <div className="shadow-lg rounded-lg bg-white py-20">
 
