@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
-import StoriesCategoryComponent from "../stories-touchpoint-section/stories-categories";
+import StoriesCategoryComponentv2 from "../stories-touchpoint-section/stories-categoriesv2";
 
 export const AuctionThirdSection = () => {
   // const products = [
@@ -67,7 +67,7 @@ export const AuctionThirdSection = () => {
           </div>
         ))}
       </div> */}
-             <StoriesCategoryComponent />
+             <StoriesCategoryComponentv2 />
     </div>
   );
 };
