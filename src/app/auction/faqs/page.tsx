@@ -4,7 +4,7 @@ export default function FAQs() {
   return (
     <section className="w-full min-h-screen bg-gradient-to-b from-gray-100 to-white text-primary-2 flex flex-col justify-start items-start md:items-center py-8 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-4xl flex flex-col justify-start items-start md:items-center ">
-        <h1 className="text-18xl md:text-[70px] font-bold mb-1 md:mb-8">
+        <h1 className="text-18xl md:text-[70px] font-bold mb-1 md:mb-8 py-6 text-timeless-black">
           AUCTI<span className="italic font-serif font-medium text-secondary-5">O</span>N +
         </h1>
         <h2 className="text-5xl md:text-21xl font-bold mb-12">Auction Rules</h2>
