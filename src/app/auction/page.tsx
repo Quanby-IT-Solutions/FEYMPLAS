@@ -12,7 +12,7 @@ export default function Auction() {
     <div className="w-full flex flex-col justify-center items-center tracking-wide text-lg">
       <section className="w-full py-6 text-timeless-black relative flex justify-center items-center">
         <h1 className="text-[70px] font-bold mx-auto">
-          AUCTI<span className="italic font-serif font-medium">O</span>N +
+          AUCTI<span className="italic font-serif font-medium text-secondary-5">O</span>N +
         </h1>
         <div>
           <Link href={"auction/faqs"} className="p-4 w-32 bg-secondary-1 text-timeless-white font-medium fixed right-0 z-20" >
