@@ -3,7 +3,7 @@ import { SideInfo } from "./side-info";
 /* eslint-disable @next/next/no-img-element */
 export const LotsFirstSection = () => {
   return (
-    <div className="w-full h-full  max-h-[calc(100vh)] overflow-hidden border border-black relative">
+    <div className="w-full h-full  max-h-[calc(100vh)] overflow-hidden relative">
       <div className="w-full max-w-[90%] h-full">
         <img
           src="/assets/auction/lot/collage.png"

@@ -5,6 +5,7 @@ import { AuctionFourthSection } from "@/components/ui/auction-sections/AuctionFo
 import { AuctionSecondSection } from "@/components/ui/auction-sections/AuctionSecondSection";
 import { AuctionThirdSection } from "@/components/ui/auction-sections/AuctionThirdSection";
 import { Buttons } from "@/components/ui/auction-sections/Buttons";
+import Link from "next/link";
 
 export default function Auction() {
   return (
@@ -14,9 +15,9 @@ export default function Auction() {
           AUCTI<span className="italic font-serif font-medium">O</span>N +
         </h1>
         <div>
-          <button className="p-4 w-32 bg-secondary-1 text-timeless-white font-medium fixed right-0 z-20">
+          <Link href={"auction/faqs"} className="p-4 w-32 bg-secondary-1 text-timeless-white font-medium fixed right-0 z-20" >
             FAQ&apos;s
-          </button>
+          </Link>
         </div>
       </section>
       <AuctionFirstSection />
