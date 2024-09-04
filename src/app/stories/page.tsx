@@ -22,9 +22,12 @@ const Root: NextPage = () => {
         </button>
       </section>
       <ImageSlider />
-      <section className="w-full flex gap-4 justify-center items-center py-32">
+      {/* <section className="w-full flex gap-4 justify-center items-center py-32"> */}
+      <div className="w-full max-w-[80%] flex flex-col py-40">
+
         <StoriesCategoryComponentv2 />
-      </section>
+        </div>
+      {/* </section> */}
       <YourEmail />
       <SubscriptionServiceComponent />
     </div>

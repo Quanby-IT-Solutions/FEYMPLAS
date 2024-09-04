@@ -1,6 +1,6 @@
 "use client";
 
-import GridItem from "../GridItem";
+import GridItemv2 from "../GridItemV2";
 
 export type CombinedStoriesComponentProps = {
   className?: string;
@@ -53,7 +53,7 @@ const gridItems = [
   },
 ];
 
-const StoriesCategoryComponent: React.FC<CombinedStoriesComponentProps> = ({
+const StoriesCategoryComponentV2: React.FC<CombinedStoriesComponentProps> = ({
   columns = 3,
 }) => {
 
@@ -64,7 +64,7 @@ const StoriesCategoryComponent: React.FC<CombinedStoriesComponentProps> = ({
       {/* Grid Container */}
       <div className={gridClass}>
         {gridItems.map((item, index) => (
-          <GridItem
+          <GridItemv2
             key={index}
             title={item.title}
             subtitle={item.subtitle}
@@ -77,4 +77,4 @@ const StoriesCategoryComponent: React.FC<CombinedStoriesComponentProps> = ({
   );
 };
 
-export default StoriesCategoryComponent;
+export default StoriesCategoryComponentV2;

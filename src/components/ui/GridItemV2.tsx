@@ -16,14 +16,14 @@ interface GridItemProps {
   subtitleSize?: string;
 }
 
-const GridItemV2: React.FC<GridItemProps> = ({ 
-  title, 
-  subtitle, 
-  imageSrc, 
-  goto, 
+const GridItemV2: React.FC<GridItemProps> = ({
+  title,
+  subtitle,
+  imageSrc,
+  goto,
   className = "",
   titleSize = "text-2xl",
-  subtitleSize = "text-lg"
+  subtitleSize = "text-lg",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
@@ -129,8 +129,8 @@ const GridItemV2: React.FC<GridItemProps> = ({
           <Image
             src={imageSrc}
             alt={title}
-            layout="fill"
-            objectFit="cover"
+            layout="fill" // Makes the image fill the container
+            objectFit="cover" // Ensures the image covers the container without distortion
           />
         </motion.div>
         <motion.div
@@ -150,9 +150,7 @@ const GridItemV2: React.FC<GridItemProps> = ({
             />
           )}
         </AnimatePresence>
-        <div
-          className="absolute inset-0 flex flex-col items-center justify-center"
-        >
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div className="relative font-medium z-20 text-white text-center leading-none">
             <h2 className={`${titleSize} mb-0`}>{title}</h2>
             {subtitle && <p className={`${subtitleSize} mt-1`}>{subtitle}</p>}
