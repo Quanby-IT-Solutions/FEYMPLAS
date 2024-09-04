@@ -139,33 +139,42 @@ export const LotsSecondsSection = () => {
               </span>
             </p>
           </div>
-          {/* if there is live bid ongoing */}
-          <div className="w-full   pt-12 max-w-[35%] text-primary-2 font-urbanist">
-            <h1 className="text-17xl font-semibold">Live Bidding</h1>
-            <div className="pt-4 p-8 ">
-              <div className="w-full max-h-[400px] h-full overflow-y-auto border border-black flex flex-col gap-8">
-                {/* users */}
-                <div className="w-full h-fit flex flex-row gap-4 justify-between items-center">
-                  <div className="w-full flex gap-2 justify-start items-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200">
-                      <img
-                        className="w-full h-full object-cover"
-                        src="/assets/auction/jane.png"
-                        alt="Jane Doe"
-                      />
-                    </div>
-                    <div className=" h-full gap-0.5 flex flex-col justify-start items-start">
-                      <p className="font-medium">Jane Doe (Paddle 2)</p>
-                      <p className="text-xs text-secondary-1">Bidding $1,950</p>
-                    </div>
-                  </div>
-                  <p className="font-[300] opacity-90">$1,950</p>
-                </div>
+          {/* if true there is ongoing bidding or false  */}
+          <LiveBidding isLive={true} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const LiveBidding = ({ isLive }: { isLive: boolean }) => {
+  if (!isLive) return null;
+
+  return (
+    <div className="w-full pt-12 max-w-[35%] text-primary-2 font-urbanist">
+      <h1 className="text-17xl font-semibold">Live Bidding</h1>
+      <div className="pt-4 p-8">
+        <div className="w-full max-h-[400px] h-full overflow-y-auto flex flex-col gap-8">
+          {/* users */}
+          <div className="w-full h-fit flex flex-row gap-4 justify-between items-center">
+            <div className="w-full flex gap-2 justify-start items-center">
+              <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200">
+                <img
+                  className="w-full h-full object-cover"
+                  src="/assets/auction/jane.png"
+                  alt="Jane Doe"
+                />
+              </div>
+              <div className="h-full gap-0.5 flex flex-col justify-start items-start">
+                <p className="font-medium">Jane Doe (Paddle 2)</p>
+                <p className="text-xs text-secondary-1">Bidding $1,950</p>
               </div>
             </div>
+            <p className="font-[300] opacity-90">$1,950</p>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
