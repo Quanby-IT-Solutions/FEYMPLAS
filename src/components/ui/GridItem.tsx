@@ -1,5 +1,4 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,8 +14,8 @@ const GridItem: React.FC<GridItemProps> = ({ title, subtitle, imageSrc, goto }) 
     <div className="relative overflow-hidden shadow-lg w-full h-64 group">
       {/* Clickable Image using Link */}
       <Link href={goto} className="relative block w-full h-full">
-        {/* Fixed width for the Link and its contents */}
-        <div className="relative w-[400px] h-64">
+        {/* Full width and height for the Link and its contents */}
+        <div className="relative w-full h-full">
           <Image
             src={imageSrc}
             alt={title}

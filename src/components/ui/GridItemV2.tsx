@@ -87,7 +87,7 @@ const GridItemV2: React.FC<GridItemProps> = ({
       bottom: "-0.5rem",
     },
     hover: {
-      width: "16rem",
+      width: "12rem",
       padding: "1rem 1.5rem",
       bottom: "-0.5rem",
       transition: { duration: 0.3, ease: "easeInOut" },

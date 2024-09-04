@@ -31,13 +31,14 @@ type RegisterProps = {
   columns?: number;
 };
 
-export default function Register({ columns = 2 }: RegisterProps) {
-  const gridClass = `grid grid-cols-1 md:grid-cols-${columns} gap-6`;
+export default function Register({ columns = 3 }: RegisterProps) {
+  // Tailwind classes for dynamic grid columns based on the `columns` prop
+  const gridClass = `grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${columns} gap-6`;
 
   return (
-    <div className="flex flex-col items-center text-gray-900 bg-white">
-      <div className="shadow-lg rounded-lg p-10">
-        <h1 className="text-17xl font-semibold text-center">
+    <div className="flex flex-col items-center text-gray-900 bg-white min-h-screen">
+      <div className="shadow-lg rounded-lg p-10 w-full max-w-5xl">
+        <h1 className="text-4xl font-semibold text-center mb-6">
           VISIT<span className="italic font-serif font-medium">O</span>R REGISTR
           <span className="font-serif">A</span>TION
         </h1>
