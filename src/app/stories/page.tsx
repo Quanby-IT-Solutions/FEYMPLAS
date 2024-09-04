@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { ImageSlider } from "@/components/ui/stories-touchpoint-section/stories-image-slider";
 import YourEmail from "@/components/ui/stories-touchpoint-section/stories-your-email";
-import Footer from "@/components/layouts/about-us-footer/about-us-footer";
+import SubscriptionServiceComponent from "@/components/ui/subscription/SubscriptionServiceComponent";
 import StoriesCategoryComponentv2 from "@/components/ui/stories-touchpoint-section/stories-categoriesv2";
 
 const Root: NextPage = () => {
@@ -26,7 +26,7 @@ const Root: NextPage = () => {
         <StoriesCategoryComponentv2 />
       </section>
       <YourEmail />
-      <Footer />
+      <SubscriptionServiceComponent />
     </div>
   );
 };

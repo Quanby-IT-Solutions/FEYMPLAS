@@ -1,4 +1,4 @@
-import RegisterSection from "@/components/register-section/RegisterSection";
+import RegisterSection from "@/components/forms/login/RegisterSection";
 
 export default function Register() {
   return (

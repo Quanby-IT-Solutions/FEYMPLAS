@@ -1,6 +1,6 @@
-import SectionTop from "../ui/SectionTop";
-import SectionTopTitle from "../ui/SectionTopTitle";
-import Carousel from "../forms/login/Carousel";
+import SectionTop from "../../ui/SectionTop";
+import SectionTopTitle from "../../ui/SectionTopTitle";
+import Carousel from "./Carousel";
 
 export default function RegisterSection() {
     const reviewers = [
@@ -48,21 +48,9 @@ export default function RegisterSection() {
     ];
 
     return (
-        <div className="w-full flex flex-col items-center justify-start tracking-wide">
-            <div className="w-full flex flex-col gap-16 items-center justify-center">
-                <SectionTopTitle
-                    titleSegments={[
-                        { content: "R" },
-                        { content: "E", italic: true, serif: true },
-                        { content: "GISTER " },
-                        { content: "N", serif: true },
-                        { content: "OW" },
-                    ]}
-                />
-
-                <SectionTop />
-                <Carousel slides={reviewers} />
-            </div>
+        <div className="w-full text-primary-2 flex flex-col gap-20">
+            <SectionTop />
+            <Carousel slides={reviewers} />
         </div>
     );
 }
