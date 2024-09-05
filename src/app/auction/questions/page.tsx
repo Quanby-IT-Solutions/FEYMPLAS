@@ -3,7 +3,7 @@ import { QuestionsSection } from "@/components/ui/auction-sections/questionsSect
 export default function Questions() {
   return (
     <section>
-        <QuestionsSection />
+      <QuestionsSection />
     </section>
   );
 }

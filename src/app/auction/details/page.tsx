@@ -6,7 +6,7 @@ import { LotsThirdSection } from "@/components/ui/auction-sections/lots-section/
 export default function Details() {
     return (
         <div className="w-full gap-20 flex flex-col pb-20">
-        <ExhibitFirstSection />
+        <ExhibitFirstSection showNavigationButtons={false} />
         <LotsSecondsSection />
         <LotsThirdSection />
         </div>

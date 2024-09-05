@@ -65,7 +65,7 @@ export default function Auction() {
         </div>
         <AuctionThirdSection />
 
- 
+
       </section>
       <section className="w-full h-[calc(100vh-10vh)] flex justify-center items-center py-16 pb-24">
         <AuctionFourthSection />
