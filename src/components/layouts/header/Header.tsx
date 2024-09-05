@@ -1,28 +1,20 @@
-// src/components/layouts/header/Header.tsx
-
 'use client';
 
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion'; // Import framer-motion
 import Image from 'next/image';
-
 import Dropdown from './Dropdown';
 import NavLink from '@/components/ui/NavLink';
-
 import AuthButton from './AuthButton';
 import HamburgerMenu from './HamburgerMenu';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // State to manage scroll detection
 
-  // Example items with nested sub-items
   const spotlightItems = [
-    {
-      label: 'Design Commune',
-    },
-    {
-      label: 'Market Days',
-    },
+    { label: 'Design Commune' },
+    { label: 'Market Days' },
     {
       label: 'Trade Fairs',
       subItems: [
@@ -33,8 +25,30 @@ const Header: React.FC = () => {
     },
   ];
 
+  // Scroll event listener to change the header style on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className='flex items-center justify-between bg-[#F4F4F2] h-[80px] p-4 lg:p-6 xl:px-[167px] xl:py-[28px] gap-4 md:gap-10 mx-auto opacity-100 top-0 z-50 shadow-md'>
+    <motion.header
+      className={`sticky top-0 flex items-center justify-between h-[80px] p-4 lg:p-6 xl:px-[167px] xl:py-[28px] gap-4 md:gap-10 mx-auto opacity-100 z-50 shadow-md transition-colors duration-300`}
+      initial={{ backgroundColor: '#F4F4F2' }}
+      animate={{
+        backgroundColor: isScrolled ? '#D1D5DB' : '#F4F4F2', // Change background color on scroll
+      }}
+    >
       {/* Logo Section */}
       <div className='logo'>
         <Image
@@ -58,11 +72,7 @@ const Header: React.FC = () => {
         <div className='flex flex-col md:flex-row items-center md:gap-6 xl:gap-8 mt-20 md:mt-0'>
           <NavLink href='/' label='Home' activeLabel={<><i className='pr-[2px]'>O</i>ME</>} />
           <NavLink href='/manila-fame' label='Manila Fame' activeLabel={<><i className='pr-[2px]'>A</i>NILA FAME</>} />
-          {/* Dropdown for Spotlight */}
-          <Dropdown
-            label="Spotlight"
-            items={spotlightItems}
-          />
+          <Dropdown label="Spotlight" items={spotlightItems} />
           <NavLink href='/stories' label='Stories' activeLabel={<><i className='pr-[2px]'>T</i>ORIES</>} />
           <NavLink href='/auction' label='Auction' activeLabel={<><i className='pr-[2px]'>U</i>CTION</>} />
           <NavLink href='/catalogue' label='Catalogue' activeLabel={<><i className='pr-[2px]'>A</i>TALOGUE</>} />
@@ -87,7 +97,7 @@ const Header: React.FC = () => {
         <AuthButton href='/login' label='Login' />
         <AuthButton href='/register' label='Register' primary />
       </div>
-    </header>
+    </motion.header>
   );
 };
 

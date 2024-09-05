@@ -1,5 +1,3 @@
-// src/components/layouts/header/Dropdown.tsx
-
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
@@ -48,22 +46,22 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
             <li key={index} className='relative group'>
                 {item.subItems ? (
                     <>
-                        <span className='p-2 flex items-center justify-between hover:bg-gray-100 whitespace-nowrap cursor-pointer group-hover:bg-gray-100 rounded text-gray-900'>
+                        <span className='p-2 flex items-center justify-between hover:bg-[#E7E8E9] whitespace-nowrap cursor-pointer group-hover:bg-[#E7E8E9] text-gray-900'>
                             {item.label}
                             {/* Arrow Icon for Sub-dropdown */}
                             <ChevronRightIcon className='w-4 h-4 ml-2 text-gray-700 group-hover:text-black' />
                         </span>
                         {/* Sub-dropdown positioned for mobile and desktop */}
-                        <ul className='absolute md:left-full left-0 md:top-0 mt-2 md:ml-1 hidden group-hover:flex flex-col bg-white border border-gray-200 rounded shadow-lg w-48 md:w-auto'>
+                        <ul className='absolute left-full top-0 mt-2 ml-1 hidden group-hover:flex flex-col bg-white shadow-lg border border-gray-200 rounded min-w-max'>
                             {item.subItems.map((subItem, subIndex) => (
-                                <li key={subIndex} className='p-2 hover:bg-gray-100 whitespace-nowrap cursor-pointer text-gray-900'>
+                                <li key={subIndex} className='p-2 hover:bg-[#E7E8E9] whitespace-nowrap cursor-pointer text-gray-900'>
                                     {subItem.label}
                                 </li>
                             ))}
                         </ul>
                     </>
                 ) : (
-                    <span className='p-2 hover:bg-gray-100 whitespace-nowrap cursor-pointer block rounded text-gray-900'>
+                    <span className='p-2 hover:bg-[#E7E8E9] whitespace-nowrap cursor-pointer block text-gray-900'>
                         {item.label}
                     </span>
                 )}
@@ -77,16 +75,14 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
             <motion.div
                 layout
                 variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
+                whileHover='hover'
+                whileTap='tap'
                 className={`tracking-tighter cursor-pointer ${isOpen ? 'text-black font-bold' : 'text-gray-700'
                     } hover:text-black p-2 flex items-center`}
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <span className='inline-flex items-center'>
-                    <span>
-                        {label}
-                    </span>
+                    <span>{label}</span>
                     {/* Down Arrow Icon for Main Dropdown */}
                     <ChevronDownIcon className='w-4 h-4 ml-2 text-gray-700' />
                 </span>
@@ -95,7 +91,7 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
             {/* Main Dropdown Menu */}
             {isOpen && (
                 <ul
-                    className='absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded shadow-lg text-gray-900 w-48 md:w-auto'
+                    className='absolute left-0 z-10 mt-2 bg-white shadow-lg border border-gray-200 rounded text-gray-900 min-w-max'
                 >
                     {renderDropdownItems(items)}
                 </ul>
