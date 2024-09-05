@@ -80,7 +80,7 @@ export const SideInfo = () => {
           </p>
         </div>
         <div>
-          <button className="w-full bg-secondary-5 text-timeless-white p-4 px-6">REGISTER FOR tHE TIMED AUCTION</button>
+          <button className="w-full bg-secondary-5 text-timeless-white p-4 px-6 uppercase">REGISTER FOR tHE TIMED AUCTION</button>
         </div>
         </div>
       </div>
