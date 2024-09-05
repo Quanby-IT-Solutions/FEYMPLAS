@@ -56,50 +56,52 @@ export const LotsThirdSection = () => {
   );
 };
 
+
 const lots = [
   {
     id: 1,
     image: "/assets/auction/lot/melle.png",
     title: "Thea Minaudiere from the Harvest Collection",
-    width: 400,
-    height: 400,
     estimate: "$1,800 - $2,200 / Estimate",
     startingBid: "$1,100 / Starting Bid",
+    inlineSize: 400,
+    blockSize: 400,
   },
   {
     id: 2,
     image: "/assets/auction/lot/gapo.png",
     title: "Thea Minaudiere from the Harvest Collection",
-    width: 400,
-    height: 400,
     estimate: "$1,800 - $2,200 / Estimate",
     startingBid: "$1,100 / Starting Bid",
+    inlineSize: 400,
+    blockSize: 400,
   },
   {
     id: 3,
     image: "/assets/auction/lot/bag.png",
     title: "Thea Minaudiere from the Harvest Collection",
-    width: 400,
-    height: 400,
     estimate: "$1,800 - $2,200 / Estimate",
     startingBid: "$1,100 / Starting Bid",
+    inlineSize: 400,
+    blockSize: 400,
   },
   {
     id: 4,
     image: "/assets/auction/lot/case.png",
     title: "Thea Minaudiere from the Harvest Collection",
-    width: 400,
-    height: 400,
     estimate: "$1,800 - $2,200 / Estimate",
     startingBid: "$1,100 / Starting Bid",
+    inlineSize: 400,
+    blockSize: 400,
   },
   {
     id: 5,
     image: "/assets/auction/lot/puso.png",
     title: "Thea Minaudiere from the Harvest Collection",
-    width: 400,
-    height: 400,
+    button: "View Auction",
     estimate: "$1,800 - $2,200 / Estimate",
     startingBid: "$1,100 / Starting Bid",
-  },
+    inlineSize: 400,
+    blockSize: 400,
+  }
 ];
