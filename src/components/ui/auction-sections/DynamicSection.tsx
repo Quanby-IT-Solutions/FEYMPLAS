@@ -1,6 +1,5 @@
 "use client";
 
-import PropTypes from "prop-types";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -16,7 +15,11 @@ interface Auction {
   blockSize: number;
 }
 
-export const DynamicSection = ({ auctions }: { auctions: Auction[] }) => {
+interface DynamicSectionProps {
+  auctions: Auction[];
+}
+
+export const DynamicSection: React.FC<DynamicSectionProps> = ({ auctions }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -60,20 +63,4 @@ export const DynamicSection = ({ auctions }: { auctions: Auction[] }) => {
       </div>
     </div>
   );
-};
-
-DynamicSection.propTypes = {
-  auctions: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      image: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      venue: PropTypes.string,
-      button: PropTypes.string,
-      inlineSize: PropTypes.number.isRequired,
-      blockSize: PropTypes.number.isRequired,
-      estimate: PropTypes.string,
-      startingBid: PropTypes.string,
-    })
-  ).isRequired,
 };
