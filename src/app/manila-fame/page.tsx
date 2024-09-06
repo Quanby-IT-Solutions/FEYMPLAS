@@ -9,7 +9,7 @@ export default function ManilaFame() {
   return (
     <div className="w-full flex flex-col justify-center items-center tracking-wide text-lg">
       <div className="w-full py-6 text-timeless-black relative flex justify-center items-center">
-      <div className="flex items-center space-x-6"> 
+        <div className="flex items-center space-x-6">
           <h1 className="text-[70px] font-bold font-urbanist">MANILA</h1>
           <img
             loading="lazy"
@@ -28,25 +28,25 @@ export default function ManilaFame() {
       {/*  Page Video #1 */}
 
       <ManilaFameFirstSection />
-      
+
       {/* Page Image #1 */}
-      
-      <div className="flex px-20 py-10"> 
-          <img
+
+      <div className="flex px-20 py-10">
+        <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/cbac6c55ef112628a55047bc2b04ab2251295ce2c53122561d01a6e24b9ae5fe?placeholderIfAbsent=true&apiKey=2a252d86bf2a48fe834ba322701d8e03"
           alt=""
           className="object-contain w-full aspect-[2.35]"
-        />  
-        </div> 
-      
+        />
+      </div>
+
       {/* End Page Image #1 */}
 
-      <ManilaFameSecondSection/>
+      <ManilaFameSecondSection />
 
-      <ManilaFameThirdSection/>
-      
-      <ManilaFameFourthSection/>
+      <ManilaFameThirdSection />
+
+      <ManilaFameFourthSection />
     </div>
   );
 }
